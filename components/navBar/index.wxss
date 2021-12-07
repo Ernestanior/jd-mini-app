@@ -1,0 +1,25 @@
+.navbar{
+  position: relative
+}
+.left-icon{
+  width: 28px;
+  height: 100%;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 55%;
+  left: 22px;
+  display: flex;
+}
+
+.left-icon .image{
+  width: 28px;
+  height: 33px;
+  margin: auto;
+}
+.nav-title, .nav-icon{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-weight: bold;
+}

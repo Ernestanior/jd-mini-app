@@ -1,0 +1,9 @@
+<!--pages/gpa/index.wxml-->
+<view class="bg">
+  <view class="course-title">CSSE1001</view>
+    <view class="first-box" wx:for="{{commentList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <view>{{item.id}} - {{item.courseCode}} -- {{item.authorNickname}}</view>
+      <view>{{item.content}}</view>
+      <view>{{item.publishTime}}</view>
+    </view>
+</view>

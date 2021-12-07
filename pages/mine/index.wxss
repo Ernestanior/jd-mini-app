@@ -1,0 +1,124 @@
+page{
+  overflow-y: hidden;
+}
+.contain{
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  background: url(https://i.ibb.co/vLNVW0s/3x.png) no-repeat;
+  background-size: contain;
+  padding: 12vh 5vw;
+}
+.title{
+  color: azure;
+  font-size: 30px;
+  padding-left: 35rpx;
+  font-weight: 600;
+}
+.user{
+  margin: 3vh 0 2vh 0;
+  display: flex;
+}
+.profile{
+  height: 15vh;
+  width: 15vh;
+  overflow: hidden;
+  border-radius: 35px;
+}
+.profile>image{
+  width: inherit;
+  height: inherit;
+}
+.detail{
+  display: flex;
+  flex-direction: column;
+  height: 12vh;
+  justify-content: center;
+}
+.basis{
+  display: flex;
+  align-items: center;
+}
+.basis .username{
+  font-size: 40rpx;
+  font-weight: 600;
+  color:#fff;
+  letter-spacing: 5rpx;
+  margin-right: 20rpx;
+}
+.basis .age{
+  font-size: 27rpx;
+  background-color: #fff;
+  padding: 5rpx 10rpx;
+  margin-right: 20rpx;
+  border-radius: 15rpx;
+}
+.basis .gender{
+  width: 50rpx;
+  height: 50rpx;
+}
+.detail .user-title{
+  color: #fff;
+  margin-top: 20rpx;
+}
+.option-container{
+  height: 46vh;
+  background-color: #fff;
+  border-radius: 2vh;
+  box-sizing: border-box;
+  padding: 3vh 4vw;
+  box-shadow: 0 5px 10px 0 rgb(233, 233, 233);
+}
+.option-container .option-box{
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 1.5vh;
+  height: 12vh;
+  background-color: rgb(244, 244, 253);
+  margin-bottom: 2vh;
+  padding: 0 3vh;
+  position: relative;
+}
+.option-container .option-box:nth-child(-n+2){
+  opacity: .4;
+}
+.option-container .option-box image{
+  height: 5.5vh;
+  width: 5vh;
+  margin-right: 5vw;
+}
+.option-container .option-box .icon{
+  position: absolute;
+  right: 0;
+  height: 3vh;
+  width: 3vh;
+}
+.option-container .option-box .option-title{
+  font-weight: 550;
+  font-size: 35rpx;
+}
+.option-container .option-box .option-note{
+  color: rgb(117, 117, 117);
+  font-size: 27rpx;
+}
+.job-collection{
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  transition: all .5s;
+  height: 100vh;
+  width: 100vw;
+}
+.collect-active{
+  top: 20vh;
+}
+.mask{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 100;
+  background-color: rgba(7, 7, 7, 0.6);
+}

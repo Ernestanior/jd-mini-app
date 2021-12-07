@@ -1,0 +1,19 @@
+<view class="job-box" wx:for="{{jobList}}" wx:for-item="item" wx:for-index="index" wx:key="id">
+  <view class="item-title">
+    <text class="title">{{item.title}}</text>
+    <view class="recruit-way">{{item.recruitWay}}</view>
+    <view class="salary">{{item.salary}}</view>
+  </view>
+  <view class="condition">
+    <view class="condition-item" wx:for="{{item.condition}}" wx:key="index">{{item}}</view>
+  </view>
+  <view class="address">
+    <image class="companyIcon" src="{{item.companyIcon}}"></image>
+    <view class="company">{{item.company}}</view>
+    <view class="city">
+      {{item.city}}
+      <image class="add-icon" src="/assets/icons/address.png"></image>
+    </view>
+  </view>
+  <view wx:if="{{item.dateTime}}" class="date-time">{{item.dateTime}}</view>
+</view>

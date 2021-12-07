@@ -1,0 +1,29 @@
+<view class="{{optionList[2].isShow===true?'mask':''}}" bindtap="handleClose"></view>
+<view class="contain">
+  <view class="title">Personal</view>
+  <view class="user">
+    <view class="profile"><image src="/assets/aaa.png"/></view>
+    <view class="detail"> 
+      <view class="basis">
+        <view class="username">小喵</view>
+        <view class="age">18岁</view>
+       <image class="gender"src="/assets/icons/mine/female.png"/>
+      </view>
+      <view class="user-title">北京大学-心理学 博士</view>
+    </view>
+  </view>
+  <view class="option-container">
+    <view class="option-box" wx:for="{{optionList}}" wx:for-item="item" wx:for-index="index" wx:key="id" bindtap="handleShow" data-id="{{index}}">
+      <image src="{{item.icon}}" alt=""/>
+      <view class="option-text">
+        <view class="option-title">{{item.title}}</view>
+        <view class="option-note">{{item.note}}</view>
+      </view>
+      <image class="icon" src="/assets/icons/youla.png" />
+    </view>
+  </view>
+  <tabBar tid="3"></tabBar>
+  <view class="job-collection {{optionList[2].isShow===true?'collect-active':''}}">
+    <jobCollect></jobCollect>
+  </view>
+</view>

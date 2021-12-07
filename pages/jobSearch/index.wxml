@@ -1,0 +1,21 @@
+<view class="job-search">
+  <navBar 
+    title-text="搜索" 
+    back-icon="/assets/icons/white/zuola.png"
+    titleColor="#fff"/>
+  <searchBox 
+    dropDown="true" 
+    ddList="{{ddList}}" 
+    ddValue="{{ddValue}}" 
+    placeHolder="{{placeholder}}"/>
+  <scroll-view scroll-y="true" class="job-container">
+    <view wx:if="{{jobList.length>0}}">
+      <jobBox jobList="{{jobList}}"/>
+      <view class="airWall"></view>
+    </view>
+    <view wx:else class="not-found">
+      <image class="image" src="/assets/notFound.png"></image>
+      你还没有收藏的职位哦
+    </view>
+  </scroll-view>
+</view>

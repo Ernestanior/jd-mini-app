@@ -1,0 +1,43 @@
+<!--pages/gpa/index.wxml-->
+<view class="bg">
+  <view class="course-title">{{course}}</view>
+  <form catchsubmit="formSubmit">
+    <view class="first-box"> 
+    <view class="target">
+      Target GPA : 
+      <input type="text" name="gpa" placeholder="Enter your target GPA"/>
+    </view>
+    <view class="score">
+      <view class="score-title">
+        <text>Assessment</text>
+        <text>Weight(%)</text>
+        <text>Score</text>
+      </view>
+      <view class="score-content">
+        <view wx:for="{{assessments}}" wx:for-item="item" wx:for-index="index" wx:key="index" class="assessment">
+          <text>{{item.assessment}}</text>
+          <text>{{item.percentage}}%</text>
+          <view>
+            <input type="number" name="score{{index}}"/>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="calculate" formType="submit">Calculate</button>
+  </form>
+  
+  <view class="second-box">
+      <view class="final">
+        <text>Final (Report/Exam)</text>
+        <text>10</text>
+        <view>
+          <text class="result">{{finalGPA}}</text>
+        </view>
+      </view>
+      <view class="analysis">
+        <text>Analysis: </text>
+        <text>您的期末应该达到及格线就能pass </text>
+      </view>
+    </view>
+</view>

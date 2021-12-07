@@ -1,0 +1,29 @@
+<!--pages/home/index.wxml-->
+<navBar 
+    title-text="首页" 
+    home-icon="/assets/logo.png"
+    background="#f2f2f2"
+    />
+<view class="content">
+  <swiper >
+    <swiper-item>
+      <image mode="widthFix" src="/assets/swiper/s2.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="widthFix" src="/assets/swiper/s1.png"></image>
+    </swiper-item>
+  </swiper>
+  <view class="home-nav">
+    <view class="home-nav-item" wx:for="{{navList}}" wx:for-item="item" wx:for-index="index" wx:key="id" bindtap="handleNavigate" data-url="{{item.url}}">
+      <view class="home-nav-img"><image src="{{item.imgURL}}"></image></view>
+      {{item.title}}
+    </view>
+  </view>
+  <view class="home-advs">
+    <image mode="widthFix" src="/assets/advs/1.png"></image>
+    <image mode="widthFix" src="/assets/advs/2.png"></image>
+  </view>
+
+  <tabBar tid="0"></tabBar>
+</view>
+

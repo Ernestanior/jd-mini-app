@@ -1,0 +1,10 @@
+<view class="input-box">
+  <view class="dropdown" bindtap="switchDD" wx:if="{{dropDown}}">
+    {{ddValue}} <image style="height:35rpx; width:35rpx; margin-left:15rpx;" src="/assets/icons/white/xiala.png"/>
+    <view class="ddList" wx:if="{{onShow}}">
+      <view class="ddList-item" hover-class="hover" wx:for="{{ddList}}" wx:key="index" data-ddValue="{{item}}" bindtap="handleDDSelect">{{item}}</view>
+    </view>
+  </view>
+  <input class="input" type="text" placeholder="{{placeHolder}}" placeholder-style="color:#b08eff;"/>
+  <image style="height:50rpx; width:50rpx;" src="/assets/icons/white/search.png"/>
+</view>

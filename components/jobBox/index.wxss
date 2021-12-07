@@ -1,0 +1,74 @@
+.job-box{
+  box-shadow: 0 0 10px 0 #eee, 0 0 15px 0 #eee;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin: 40rpx;
+  margin-top: 20rpx;
+}
+.job-box .item-title{
+  position: relative;
+  display: flex;
+  margin-bottom: 10rpx;
+}
+.job-box .item-title .title{
+  font-weight: 500;
+  margin-right: 15rpx;
+}
+.job-box .item-title .salary{
+  position: absolute;
+  right: 0;
+  font-weight: 500;
+  color: rgb(255, 137, 58);
+}
+.job-box .recruit-way{
+  padding: 5rpx 14rpx;
+  background-color: rgb(97, 10, 148);
+  font-size: 25rpx;
+  color: #eee;
+  border-radius: 18rpx;
+}
+.job-box .condition{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10rpx;
+}
+.job-box .condition-item{
+  font-size: 25rpx;
+  padding: 8rpx 14rpx;
+  background-color: rgb(240, 240, 240);
+  color: rgb(109, 109, 109);
+  margin: 15rpx 10rpx 0 0;
+  border-radius: 15rpx;
+}
+
+.job-box .address{
+  position: relative;
+  margin-top: 25rpx;
+  padding-top: 15rpx;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 25rpx;
+  align-items: center;
+  color: rgb(131, 131, 131);
+  border-top: 1px solid rgb(230, 230, 230);
+}
+.job-box .address .companyIcon{
+  width: 3vh;
+  height: 3vh;
+  margin-right: 5rpx;
+}
+.job-box .address .city{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+.job-box .address .city .add-icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.job-box .date-time{
+  margin-top: 1vh;
+  color: rgb(160, 160, 160);
+  font-size: 25rpx;
+}

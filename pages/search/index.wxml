@@ -1,0 +1,18 @@
+<!--pages/search/index.wxml-->
+<view class="bg">
+  <view class="search">
+    <view class="icon-left">
+      <image src="../../assets/list.png" />
+    </view>
+    <input type="text" bindinput="handleInput" placeholder="Course Search"/>
+    <view class="icon-right" bindtap="handleSearch">
+      <image src="../../assets/search.png" />
+    </view>
+  </view>
+  <view class="history">
+    <!-- <view class="title">History</view> -->
+    <view class="list">
+      <view wx:for="{{searchList}}" wx:for-item="item" wx:key="index" bindtap="handleCourseTap" data-course="{{item}}">{{item}}</view>
+    </view>
+  </view>
+</view>

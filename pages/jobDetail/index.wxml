@@ -1,0 +1,17 @@
+<view class="job-detail">
+  <navBar 
+    title-text="职位详情" 
+    back-icon="/assets/icons/white/zuola.png"
+    titleColor="#fff"/>
+  <view class="head">
+    <view style="display: flex;justify-content: space-between;">
+      <view class="title">{{jobDetail.title}}</view>
+      <view class="salary">{{jobDetail.salary}}</view>
+    </view>
+    <view style="display: flex;">
+      <view class="tag">
+        <image></image>
+      </view>
+    </view>
+  </view>
+</view>

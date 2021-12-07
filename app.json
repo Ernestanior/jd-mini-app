@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/mine/index",
+    "pages/gpa/index",
+    "pages/search/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/comment/index",
+    "pages/jobSearch/index",
+    "pages/jobDetail/index",
+    "components/navBar/index",
+    "components/tabBar/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "navigationBar": "/components/navBar"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navBar": "/components/navBar",
+    "tabBar": "/components/tabBar",
+    "jobCollect":"/components/jobCollect"
+  }
+}

@@ -1,0 +1,21 @@
+<!-- <view class="tabbar">
+  <view class="tabbar-item" wx:for="{{tabList}}" wx:for-item="item" wx:for-index="index">
+    <image src="{{item.img}}"></image> 
+    {{item.title}}
+  </view>
+</view> -->
+<view class="tabbar">
+    <view wx:for="{{tabList}}" wx:key="id">
+      <button class="tab-btn" open-type="{{item.open_type}}" bindtap="{{item.bindtap}}">
+        <view wx:if="{{!item.isActive}}">
+          <image class="tab-image" src="{{item.img}}"></image>
+        </view>
+        <view wx:else>
+          <image class="tab-image" src="{{item.imgActive}}"></image>
+        </view>
+        <view class="{{item.isActive?'active':''}}">
+          <text>{{item.title}}</text>
+        </view>
+      </button>
+    </view>
+  </view>
