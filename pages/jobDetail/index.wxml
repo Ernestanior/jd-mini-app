@@ -16,8 +16,8 @@
         <view class="tag">
           <image class="icon" src="/assets/icons/white/history.png"></image>{{jobDetail.type}}
         </view>
-        <view class="tag">
-          <image class="icon" src="/assets/icons/white/degree.png"></image>{{jobDetail.eduReq}}
+        <view class="tag_degree">
+          <image class="icon" src="/assets/icons/white/degree.png"></image><text class="text">{{jobDetail.eduReq}}</text>
         </view>
       </view>
       <view class="{{favedByCurUser?'collect active':'collect'}}" bindtap="handleCollect">
@@ -29,13 +29,13 @@
     <view class="title">职位详情</view>
     <view class="content">
       <!-- <view class="line" wx:for="{{jobDetail.detail}}" wx:key="index">{{item}}</view> -->
-      <view class="desc">{{jobDetail.desc}}</view>
+      <text class="desc">{{jobDetail.desc}}</text>
     </view>
     <view class="company">
-      <image class="logo" src="/assets/jd.png"></image>
+      <image class="logo" mode="widthFix" src="https://api.reviewonclass.com/static/image/{{jobDetail.compLogo}}"></image>
       <view>
         <view class="companyName">{{jobDetail.companyName}}</view>
-        <view class="description">{{jobDetail.companyDescription}} - {{jobDetail.staffSize}}人</view>
+        <view class="description">{{jobDetail.companyDescription}} - {{jobDetail.staffSize}}</view>
       </view>
     </view>
   </view>

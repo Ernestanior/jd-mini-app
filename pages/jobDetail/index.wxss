@@ -23,7 +23,25 @@
   align-items: center;
   font-size: 25rpx;
 }
+.head .tag_degree{
+  color: #fff;
+  margin-right: 40rpx;
+  display: flex;
+  align-items: center;
+  font-size: 25rpx;
+}
+.head .tag_degree .text{
+  width: 240rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .head .tag .icon{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.tag_degree .icon{
   width: 30rpx;
   height: 30rpx;
   margin-right: 10rpx;
@@ -71,8 +89,7 @@
 }
 .company .logo{
   width: 80rpx;
-  height: 80rpx;
-  margin-right: 20rpx;
+  margin-right: 40rpx;
 }
 .company .companyName{
   font-size: 28rpx;

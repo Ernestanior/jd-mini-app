@@ -1,7 +1,6 @@
 .job-search{
   width: 100vw;
-  height: 100vh;
-  background: url(https://s4.ax1x.com/2022/01/22/7hTDqP.png) no-repeat;
+  background: url(https://s4.ax1x.com/2022/01/22/7hTDqP.png) no-repeat 0 -70rpx;
   background-size: contain;
 }
 .job-search .job-title{
@@ -22,7 +21,6 @@
 }
 .job-search .job-content{
   padding: 30rpx;
-  margin-top: 90rpx;
 }
 .job-search .job-content .job-content-title{
   text-align: center;

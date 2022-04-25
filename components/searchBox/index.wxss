@@ -7,7 +7,7 @@
   padding: 10rpx 0 10rpx 30rpx;
   border: 5rpx solid #fff;
   box-sizing: border-box;
-  height: 6.5vh;
+  height: 5vh;
   border-radius: 15rpx;
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
 }
 .input-box{
   flex:1;
-  height: 6.5vh;
+  height: 5vh;
   box-sizing: border-box;
   border: 5rpx solid #fff;
   border-radius: 15rpx;

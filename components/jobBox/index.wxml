@@ -8,9 +8,9 @@
     <view class="tags" wx:for="{{item.tags}}" wx:key="index">{{item}}</view>
   </view>
   <view class="address">
-    <image class="companyIcon" src="/assets/jd.png"></image>
+    <image class="companyIcon" mode="widthFix" src="https://api.reviewonclass.com/static/image/{{item.compLogo}}"></image>
     <view class="companyName">{{item.companyName}}</view>
-    <view class="staffSize">{{item.companyStaffSize}}人</view>
+    <view class="staffSize">{{item.companyStaffSize}}</view>
     <view class="city">
       {{item.location}}
       <image class="add-icon" src="/assets/icons/address.png"></image>

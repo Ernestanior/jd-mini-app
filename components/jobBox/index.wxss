@@ -13,6 +13,10 @@
 .job-box .item-title .role{
   font-weight: 500;
   margin-right: 15rpx;
+  max-width: 350rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .job-box .item-title .salaryRange{
   position: absolute;
@@ -55,10 +59,10 @@
 .job-box .address .companyIcon{
   width: 3vh;
   height: 3vh;
-  margin-right: 6rpx;
+  margin-right: 16rpx;
 }
 .job-box .address .companyName{
-  margin-right: 10rpx;
+  margin-right: 20rpx;
 }
 .job-box .address .city{
   display: flex;
