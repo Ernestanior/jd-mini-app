@@ -1,0 +1,33 @@
+<navBar back-icon="/assets/icons/zuola.png" titleColor="#000" />
+<view class="note-detail-container">
+  <view class="user">
+    <image class="user-head" src="{{noteDetail.authorAvatar}}"></image>
+    {{noteDetail.authorName}}
+  </view>
+  <scroll-view scroll-y="true" class="scroll-view">
+    <swiper wx:if="{{noteDetail.pics&&noteDetail.pics.length}}" indicator-color="#fff" indicator-active-color="#ee7625">
+      <!-- <swiper-item>
+      <image mode="widthFix" src="https://s4.ax1x.com/2022/02/12/HB9VXQ.jpg" data-url="https://s4.ax1x.com/2022/02/12/HB9VXQ.jpg" bindtap="clickImg"></image>
+    </swiper-item>
+    <swiper-item >
+      <image mode="widthFix" src="https://s4.ax1x.com/2022/02/12/HB931U.jpg"></image>
+    </swiper-item> -->
+    <swiper-item wx:for="{{noteDetail.pics}}" wx:key="item">
+      <image mode="widthFix" src="https://api.reviewonclass.com/static/image/{{item}}"></image>
+    </swiper-item>
+  </swiper>
+  <view class="content-box">
+    <view class="title">{{noteDetail.title}}<image wx:if="{{isMyNote}}" src="/assets/icons/trash.png" bindtap="handleDelete"></image></view>
+    <rich-text class="content" nodes="{{noteDetail.content}}"></rich-text>
+    <view class="publish-time">{{noteDetail.publishTime}}</view>
+    <comment comment="{{comment}}"/>
+  </view>
+  </scroll-view>
+  <view class="func-container">
+    <view class="func-bar">
+      <input type="text" placeholder="说点什么..." class="comment-input"/>
+      <view class="like"><image src="/assets/icons/heart-fill.png" wx:if="{{likedByCurUser}}" bindtap="handleLike"/><image src="/assets/icons/heart.png" wx:else bindtap="handleLike"/>{{like}}</view>
+      <view class="fav"><image src="/assets/icons/star-fill.png"  wx:if="{{favedByCurUser}}" bindtap="handleFav"/><image src="/assets/icons/star.png" wx:else bindtap="handleFav"/>{{fav}}</view>
+    </view>
+  </view>
+</view>

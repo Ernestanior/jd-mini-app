@@ -14,7 +14,7 @@ Component({
       },
       titleText: {
           type: String,
-          value: '导航栏'
+          value: ''
       },
       titleImg: {
           type: String,

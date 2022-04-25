@@ -1,0 +1,98 @@
+.user{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  position: absolute;
+  top: 100rpx;
+  left:150rpx;
+}
+.user-head{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  /* overflow: hidden; */
+  background-color: #fff;
+  margin-right: 20rpx;
+}
+.scroll-view {
+  margin-top: 20rpx;
+  height: 80.5vh;
+}
+.func-container{
+  height: 8vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #dbdbdb;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+.func-bar{
+  display: flex;
+  align-items: center;
+  height: 50rpx;
+  width: 100%;
+}
+.func-bar>view{
+  flex:1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  
+}
+.func-bar image{
+  margin-right: 10rpx;
+  width: 55rpx;
+  height: 55rpx;
+}
+
+.fav image{
+  width: 49rpx;
+  height: 44rpx;
+}
+.comment-input{
+  background-color: #eeeeee;
+  width: 50vw;
+  border-radius: 30rpx;
+  margin-right: 20rpx;
+  padding: 10rpx 25rpx 10rpx 25rpx;
+}
+swiper{
+  height: 60vh;
+}
+swiper-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+swiper-item image{
+  width: 100%;
+}
+.content-box{
+  padding: 30rpx;
+  letter-spacing: 1rpx;
+  font-size: 30rpx;
+  color: #444;
+}
+.content-box .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 34rpx;
+  font-weight: 550;
+  margin-bottom: 20rpx;
+  color: #000;
+}
+.content-box .title image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.content-box .publish-time{
+  font-size: 24rpx;
+  color: #aaa;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+}

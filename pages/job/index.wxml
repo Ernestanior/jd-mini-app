@@ -1,0 +1,21 @@
+<view class="job-search">
+  <navBar  
+    back-icon="/assets/icons/white/zuola.png"
+    titleColor="#fff"/>
+  <view class="job-title">
+    实习校招
+    <view class="job-title-desc">寻找最优秀的你</view>
+  </view>
+  <searchBox 
+    dropDown="true" 
+    ddList="{{ddList}}" 
+    ddValue="{{ddValue}}" 
+    placeHolder="{{placeholder}}"
+    bindsearchParams="handleSearch"/>
+  <view class="job-content">
+    <view class="job-content-title">--= 校招情报 =--</view>
+    <view class="job-content-img">
+      <image wx:for="{{images}}" wx:key="item" mode="widthFix" src="{{item}}"></image>
+    </view>
+  </view>
+</view>

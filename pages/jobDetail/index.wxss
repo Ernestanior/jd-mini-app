@@ -7,10 +7,79 @@
 .head{
   padding: 40rpx 30rpx 0 30rpx;
 }
-.head .title{
+.head .role{
   color: #fff;
+  font-weight: 500;
+  font-size: 35rpx;
 }
-.head .salary{
+.head .salaryRange{
   font-weight: 500;
   color: rgb(252, 128, 27);
+}
+.head .tag{
+  color: #fff;
+  margin-right: 40rpx;
+  display: flex;
+  align-items: center;
+  font-size: 25rpx;
+}
+.head .tag .icon{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.head .collect{
+  padding: 8rpx 25rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+  border: 2rpx solid #fff;
+}
+.head .active{
+  background-color: #fc801b;
+  border: 2rpx solid #fc801b;
+}
+.head .collect .icon{
+  width: 35rpx;
+  height: 35rpx;
+}
+.body{
+  margin-top: 30rpx;
+  padding: 40rpx;
+}
+.body .title{
+  font-weight: 600;
+  font-size: 32rpx;
+}
+.body .content{
+  margin-top: 50rpx;
+  font-size: 26rpx;
+  color: rgb(131, 131, 131);
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid rgb(202, 199, 199);
+}
+.body .content .desc{
+  line-height: 55rpx;
+}
+.company {
+  margin-top: 40rpx;
+  display: flex;
+  box-shadow: 15rpx 15rpx 25rpx 10rpx rgb(241, 241, 241);
+  padding: 25rpx;
+  border-radius: 30rpx;
+}
+.company .logo{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+.company .companyName{
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+.company .description{
+  font-size: 25rpx;
+  color: rgb(117, 117, 117);
 }

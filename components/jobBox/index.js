@@ -21,6 +21,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    toDetail(e){
+      const {id} = e.currentTarget.dataset;
+      wx.navigateTo({
+        url: `/pages/jobDetail/index?id=${id}`,
+      })
+    }
   }
 })

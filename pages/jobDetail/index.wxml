@@ -4,14 +4,40 @@
     back-icon="/assets/icons/white/zuola.png"
     titleColor="#fff"/>
   <view class="head">
-    <view style="display: flex;justify-content: space-between;">
-      <view class="title">{{jobDetail.title}}</view>
-      <view class="salary">{{jobDetail.salary}}</view>
+    <view style="display: flex;justify-content: space-between;margin-bottom: 35rpx;">
+      <view class="role">{{jobDetail.role}}</view>
+      <view class="salaryRange">{{jobDetail.salaryRange}}</view>
     </view>
-    <view style="display: flex;">
-      <view class="tag">
-        <image></image>
+    <view style="display: flex;justify-content: space-between;">
+      <view style="display: flex;">
+        <view class="tag">
+          <image class="icon" src="/assets/icons/white/address.png"></image>{{jobDetail.location}}
+        </view>
+        <view class="tag">
+          <image class="icon" src="/assets/icons/white/history.png"></image>{{jobDetail.type}}
+        </view>
+        <view class="tag">
+          <image class="icon" src="/assets/icons/white/degree.png"></image>{{jobDetail.eduReq}}
+        </view>
+      </view>
+      <view class="{{favedByCurUser?'collect active':'collect'}}" bindtap="handleCollect">
+        <image class="icon" src="/assets/icons/white/collect.png"></image>
       </view>
     </view>
   </view>
+  <view class="body">
+    <view class="title">职位详情</view>
+    <view class="content">
+      <!-- <view class="line" wx:for="{{jobDetail.detail}}" wx:key="index">{{item}}</view> -->
+      <view class="desc">{{jobDetail.desc}}</view>
+    </view>
+    <view class="company">
+      <image class="logo" src="/assets/jd.png"></image>
+      <view>
+        <view class="companyName">{{jobDetail.companyName}}</view>
+        <view class="description">{{jobDetail.companyDescription}} - {{jobDetail.staffSize}}人</view>
+      </view>
+    </view>
+  </view>
+
 </view>

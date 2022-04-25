@@ -9,9 +9,9 @@
     <swiper-item>
       <image mode="widthFix" src="/assets/swiper/s2.png"></image>
     </swiper-item>
-    <swiper-item>
+    <!-- <swiper-item>
       <image mode="widthFix" src="/assets/swiper/s1.png"></image>
-    </swiper-item>
+    </swiper-item> -->
   </swiper>
   <view class="home-nav">
     <view class="home-nav-item" wx:for="{{navList}}" wx:for-item="item" wx:for-index="index" wx:key="id" bindtap="handleNavigate" data-url="{{item.url}}">

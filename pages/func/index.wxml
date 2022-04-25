@@ -1,0 +1,13 @@
+<!--pages/func/index.wxml-->
+<!-- <text>pages/func/index.wxml</text> -->
+<!-- <wxml-to-canvas class="widget" width="375" height="550"></wxml-to-canvas> -->
+<view class="func-container">
+  <wemark md="{{md}}" link highlight type="wemark"></wemark>
+  <tabBar tid="1"></tabBar>
+</view>
+
+
+<!-- <import src="../../wxParse/wxParse.wxml"/>
+<view>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view> -->

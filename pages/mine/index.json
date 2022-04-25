@@ -1,7 +1,9 @@
 {
+  "navigationStyle": "custom",
   "usingComponents": {
     "navBar": "/components/navBar",
     "tabBar": "/components/tabBar",
-    "jobCollect":"/components/jobCollect"
+    "jobCollect":"/components/jobCollect",
+    "noteCollect":"/components/noteCollect"
   }
 }

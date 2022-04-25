@@ -10,17 +10,17 @@
   display: flex;
   margin-bottom: 10rpx;
 }
-.job-box .item-title .title{
+.job-box .item-title .role{
   font-weight: 500;
   margin-right: 15rpx;
 }
-.job-box .item-title .salary{
+.job-box .item-title .salaryRange{
   position: absolute;
   right: 0;
   font-weight: 500;
   color: rgb(255, 137, 58);
 }
-.job-box .recruit-way{
+.job-box .type{
   padding: 5rpx 14rpx;
   background-color: rgb(97, 10, 148);
   font-size: 25rpx;
@@ -32,7 +32,7 @@
   flex-wrap: wrap;
   margin-bottom: 10rpx;
 }
-.job-box .condition-item{
+.job-box .tags{
   font-size: 25rpx;
   padding: 8rpx 14rpx;
   background-color: rgb(240, 240, 240);
@@ -55,7 +55,10 @@
 .job-box .address .companyIcon{
   width: 3vh;
   height: 3vh;
-  margin-right: 5rpx;
+  margin-right: 6rpx;
+}
+.job-box .address .companyName{
+  margin-right: 10rpx;
 }
 .job-box .address .city{
   display: flex;
@@ -67,7 +70,7 @@
   width: 40rpx;
   height: 40rpx;
 }
-.job-box .date-time{
+.job-box .dateTime{
   margin-top: 1vh;
   color: rgb(160, 160, 160);
   font-size: 25rpx;

@@ -1,0 +1,23 @@
+<navBar title-text="发布笔记" back-icon="/assets/icons/zuola.png" titleColor="#000" />
+<form catchsubmit="onSubmit">
+  <view class="publish-container">
+    <view class="uni">
+      <picker name="uniId" value="{{id}}" range="{{uniList}}" bindchange="bindPickerChange">
+        <view class="picker">{{uniList[id-1]}}</view>
+      </picker>
+      <input type="text" class="course" placeholder="输入课程编号" bindinput="changeCourse"/>
+    </view>
+    <textarea class="title" name="title" placeholder="你的标题" auto-focus />
+    <textarea class="content" name="content" placeholder="分享你的一些想法~~" auto-focus />
+    <view class="photo-list">
+      <view wx:for="{{imgPaths}}" wx:key="item" class="photo">
+        <image src="{{item}}"></image>
+        <image class="minus" src="/assets/icons/minus.png" data-name="{{item}}" bindtap="onDelete"></image>
+      </view>
+      <view wx:if="{{imgPaths.length<6}}" class="add" bindtap="uploadImg">
+        <image src="/assets/icons/add.png"></image>
+      </view>
+    </view>
+    <button class="publish" formType="submit">发布</button>
+  </view>
+</form>

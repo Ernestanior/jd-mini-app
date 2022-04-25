@@ -1,0 +1,37 @@
+.note-collect{
+  height: 80vh;
+  background-color: #fff;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  padding: 2vh 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.note-collect .container-title{
+  text-align: center;
+  font-size: 35rpx;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+.note-container{
+  height: 80vh;
+  box-sizing: border-box;
+}
+.airWall{
+  height: 1rpx;
+  width: 1rpx;
+  margin-top: 150rpx;
+}
+.not-found{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgb(170, 170, 170);
+}
+.not-found .image{
+  width: 300rpx;
+  height: 300rpx;
+}

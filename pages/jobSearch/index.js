@@ -1,76 +1,139 @@
-// pages/jobSearch/index.js
+const app = getApp()
+const {
+  request,
+  getJdList
+} = app.require('request/index.js');
+const {
+  debounce
+} = app.require('utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    ddList:['职位','公司','全部'],
-    ddValue:'职位',
-    placeholder:"职位 / 公司 / 全部",
-    jobList:[
-      {
-        title:"数据分析实习生 [ 北京 ]",
-        city:"天门市",
-        recruitWay:"校招",
-        salary:"2k-4k",
-        condition:["经验不限","本科","主动学习","普通话标准","统计专员"],
-        companyIcon:"/assets/jd.png",
-        company:"北京京东世纪有限公司",
-      },
-      {
-        title:"数据分析实习生 [ 北京 ]",
-        city:"天门市",
-        recruitWay:"校招",
-        salary:"2k-4k",
-        condition:["经验不限","本科","主动学习","普通话标准","统计专员"],
-        companyIcon:"/assets/jd.png",
-        company:"北京京东世纪有限公司",
-      },
-      {
-        title:"数据分析实习生 [ 北京 ]",
-        city:"天门市",
-        recruitWay:"校招",
-        salary:"2k-4k",
-        condition:["经验不限","本科","主动学习","普通话标准","统计专员"],
-        companyIcon:"/assets/jd.png",
-        company:"北京京东世纪有限公司",
-      },
-      {
-        title:"数据分析实习生 [ 北京 ]",
-        city:"天门市",
-        recruitWay:"校招",
-        salary:"2k-4k",
-        condition:["经验不限","本科","主动学习","普通话标准","统计专员"],
-        companyIcon:"/assets/jd.png",
-        company:"北京京东世纪有限公司",
-      },
-      {
-        title:"数据分析实习生 [ 北京 ]",
-        city:"天门市",
-        recruitWay:"校招",
-        salary:"2k-4k",
-        condition:["经验不限","本科","主动学习","普通话标准","统计专员"],
-        companyIcon:"/assets/jd.png",
-        company:"北京京东世纪有限公司",
-      },
-      {
-        title:"数据分析实习生 [ 北京 ]",
-        city:"天门市",
-        recruitWay:"校招",
-        salary:"2k-4k",
-        condition:["经验不限","本科","主动学习","普通话标准","统计专员"],
-        companyIcon:"/assets/jd.png",
-        company:"北京京东世纪有限公司",
-      }
-    ]
+    ddList: ['职位', '公司'],
+    ddValue: '职位',
+    placeholder: "职位 / 公司 ",
+    type: "",
+    value: "",
+    pageNum: 1,
+    city: '上海',
+    stopLoading: false,
+    jobList: [],
+    triggered:false,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: async function (options) {
+    console.log(options);
+    const type = Object.keys(options)[0]
+    const city = options['city']
+    console.log(type);
+    console.log(city);
+    const value = options[type]
+    this.setData({
+      stopLoading: false,
+      pageNum:1,
+      type,
+      value,
+      city
+    }, () => {
+      const {
+        pageNum,
+        city,
+        type,
+        value
+      } = this.data
+      this.findJdList(city, pageNum, type, value, true)
+    })
   },
-
+  handleSearch(e) {
+    const {
+      type,
+      value,
+      city
+    } = e.detail;
+    this.setData({
+      stopLoading: false,
+      pageNum:1,
+      type,
+      value,
+      city
+    }, () => {
+      const {
+        pageNum,
+        city,
+        type,
+        value
+      } = this.data
+      this.findJdList(city, pageNum, type, value, true)
+    })
+  },
+  async findJdList(city, pageNum, type, value, reload) {
+    wx.showLoading({
+      title: 'loading',
+      mask: true,
+    })
+    const res = await getJdList({
+      city,
+      pageNum,
+      "pageSize": 10,
+      [type]: value
+    })
+    wx.hideLoading()
+    if (res) {
+      const {
+        data
+      } = res.data
+      if (data) {
+        this.setData({
+          jobList: reload ? [...data] : [...this.data.jobList, ...data],
+          stopLoading: false,
+          triggered:false
+        })
+        return data;
+      }
+    } else {
+      console.log(res);
+    }
+  },
+  reload(){
+    this.setData({
+      stopLoading: false,
+      pageNum:1,
+    }, () => {
+      const {
+        pageNum,
+        city,
+        type,
+        value
+      } = this.data
+      this.findJdList(city, pageNum, type, value, true)
+    })
+  },
+  loadMore() {
+    !this.data.stopLoading && this.setData({
+      pageNum: this.data.pageNum + 1
+    }, async () => {
+      const {
+        pageNum,
+        city,
+        type,
+        value
+      } = this.data
+      console.log(pageNum, city, type, value);
+      const result = await this.findJdList(city, pageNum, type, value, false)
+      if (result.length < 10) {
+        wx.showToast({
+          title: '没有更多职位了哦',
+        })
+        this.setData({
+          stopLoading: true
+        })
+      }
+    })
+  }
 })

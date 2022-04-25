@@ -1,0 +1,3 @@
+.func-container{
+  padding: 220rpx 30rpx;
+}

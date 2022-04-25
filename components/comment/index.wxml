@@ -1,0 +1,20 @@
+<view class="comment-container">
+  <view class="total">共 {{comment.length}} 条评论</view>
+  <input type="text" placeholder="爱评论的人运气都不差~" class="comment-input" />
+  <view wx:for="{{comment}}" wx:key="item" class="comment-box">
+    <image class="user-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/sLFwDic6O9Fs5dLgkdbicicZEGjcas0U3VOeMLD52rD1zHGUqXhWCu0cIIYkbJjMmDPMTQnjWnMIpQiamX39Nyjnyw/132"></image>
+    <view class="comment-content">
+      <view class="name">
+        {{item.authorName}}
+        <view wx:if="{{item.replyId!==0}}" class="comment-reply"><span> 回复 </span> {{comment[item.replyId-1].authorName}}</view>
+      </view>
+      <view class="content">{{item.content}}</view>
+    </view>
+    <view class="like">
+      <image src="/assets/icons/heart.png" />
+      {{item.like}}
+    </view>
+
+  </view>
+
+</view>

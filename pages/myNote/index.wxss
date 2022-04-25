@@ -1,0 +1,77 @@
+.search {
+  display: flex;
+  padding: 20rpx 40rpx 0 40rpx;
+  justify-content: space-between;
+}
+
+.search .publich {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+  font-weight: normal;
+  width: 100%;
+  background-color: #f59236;
+  border-radius: 20rpx;
+  box-shadow: 0 0 15rpx 0 #e2e2e2, 10rpx 10rpx 25rpx 0 #e2e2e2;
+}
+
+.search .publich image {
+  margin-left: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.scroll-view {
+  height: 93vh;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(170, 170, 170);
+}
+
+.not-found .image {
+  width: 300rpx;
+  height: 300rpx;
+}
+.publishing{
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  height: 100rpx;
+  width: 100%;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 50rpx;
+  font-weight: 600;
+  color: #1bb122;
+  box-shadow: 0 5rpx 10rpx 0 #f0f0f0;
+}
+.publishing .percent{
+  color: rgb(255, 153, 36);
+  font-size: 30rpx;
+  font-weight: 500;
+  margin-left: 20rpx;
+}
+@property --progress {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+.g-progress {
+    margin-left: 60rpx;
+    width: 350rpx;
+    height: 35rpx;
+    border-radius: 35rpx;
+    background: linear-gradient(90deg, #0f0, #0ff var(--progress), transparent 0);
+    border: 2rpx solid rgb(255, 233, 206);
+    transition: .3s --progress;
+}

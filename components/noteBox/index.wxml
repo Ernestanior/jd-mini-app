@@ -1,0 +1,26 @@
+<view class="note-container">
+  <view class="note-box" wx:for="{{noteList}}" wx:key="id" data-id="{{item.id}}" bindtap="toDetail">
+  <image mode="widthFix" src="https://s4.ax1x.com/2022/02/03/HEUYG9.png"></image>
+  <view class="note-content">
+    <view class="note-title">{{item.title}}</view>
+    <view class="note-detail">
+      <view class="note-user">
+        <view class="user-icon">
+          <image mode="widthFix" src="/assets/bbb.png"></image>
+        </view>
+        <view class="user-name">{{item.authorName}}</view>
+      </view>
+      <view class="note-icon">
+        <view class="note-like">
+          <image mode="widthFix" src="/assets/icons/star-fill.png"></image>
+          <view class="note-num">{{item.fav}}</view>
+        </view>
+        <view class="note-like">
+          <image mode="widthFix" src="/assets/icons/heart-fill.png"></image>
+          <view>{{item.like}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

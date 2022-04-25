@@ -1,6 +1,6 @@
 <view class="job-collect" >
   <view class="container-title">已收藏职位</view>
-  <scroll-view scroll-y="true" class="job-container">
+  <scroll-view scroll-y="true" class="job-container" bindscrolltolower="loadMore" refresher-enabled="{{true}}" refresher-threshold="{{100}}" refresher-triggered="{{triggered}}" bindrefresherrefresh="reload">
     <view wx:if="{{jobList.length>0}}">
       <jobBox jobList="{{jobList}}"/>
       <view class="airWall"></view>

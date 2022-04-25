@@ -19,14 +19,14 @@
           "scene": null
         },
         {
-          "name": "pages/jobDetail/index",
-          "pathName": "pages/jobDetail/index",
+          "name": "pages/publish/index",
+          "pathName": "pages/publish/index",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/search/index",
-          "pathName": "pages/search/index",
+          "name": "pages/noteDetail/index",
+          "pathName": "pages/noteDetail/index",
           "query": "",
           "scene": null
         },
@@ -35,6 +35,19 @@
           "pathName": "pages/comment/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/myNote/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/job/index",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
         }
       ]
     }

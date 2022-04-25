@@ -1,0 +1,75 @@
+.note-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+}
+.note-box {
+  margin-bottom: 40rpx;
+  box-shadow: 0 0 5px 0 #e2e2e2, 0 0 10px 0 #e2e2e2, 0 0 15px 0 #e2e2e2;
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+
+.note-box>image {
+  width: 320rpx;
+}
+
+.note-box .note-content {
+  padding: 10rpx 20rpx 20rpx 20rpx;
+}
+
+.note-box .note-content .note-title {
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+}
+
+.note-box .note-content .note-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-box .note-content .note-detail .note-user {
+  display: flex;
+  align-items: center;
+}
+
+.note-box .note-content .note-detail .note-user .user-name {
+  font-size: 20rpx;
+}
+
+.note-box .note-content .note-detail .note-user .user-icon {
+  background-color: pink;
+  border-radius: 50%;
+  width: 48rpx;
+  height: 48rpx;
+  overflow: hidden;
+  margin-right: 10rpx;
+}
+
+.note-box .note-content .note-user .user-icon image {
+  width: 48rpx;
+}
+
+.note-box .note-content .note-icon {
+  display: flex;
+  align-items: center;
+}
+
+.note-box .note-content .note-icon .note-like {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15rpx;
+  margin-left: 20rpx;
+}
+
+.note-box .note-content .note-icon .note-like image {
+  width: 30rpx;
+}
+
+.note-box .note-content .note-icon .note-like .note-num {
+  margin-top: 5rpx;
+}

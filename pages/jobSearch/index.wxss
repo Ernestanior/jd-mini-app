@@ -9,6 +9,11 @@
   height: 75vh;
   box-sizing: border-box;
 }
+.no-more{
+  display: flex;
+  justify-content: center;
+  color:#aaa;
+}
 .airWall{
   height: 1rpx;
   width: 1rpx;

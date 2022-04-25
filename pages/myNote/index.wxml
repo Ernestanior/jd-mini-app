@@ -1,0 +1,18 @@
+
+<scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="loadMore" refresher-enabled="{{true}}" refresher-threshold="{{100}}" refresher-triggered="{{triggered}}" bindrefresherrefresh="reload">
+  <view class="search">
+    <button class="publich" bindtap="handlePublish"><span class="text">发布笔记</span>
+      <image mode="widthFix" src="/assets/icons/white/publish.png"></image>
+    </button>
+  </view>
+  <noteBox noteList="{{noteList}}" wx:if="{{noteList.length>0}}" />
+  <view wx:else class="not-found">
+    <image class="image" src="/assets/notFound.png"></image>
+    找不到你想要的笔记
+  </view>
+</scroll-view>
+<view class="publishing" wx:if="{{publishing&&publishPercent<95}}">
+  发布中... 
+  <view class="g-progress" style="--progress: {{publishPercent}}%">
+</view><view class="percent">{{publishPercent}}%</view></view>
+<tabBar tid="1"></tabBar>

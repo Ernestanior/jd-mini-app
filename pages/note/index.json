@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "navBar": "/components/navBar",
+    "noteBox": "/components/noteBox"
+  },
+  "navigationBarTitleText": "搜索笔记",
+  "enablePullDownRefresh": true, 
+  "backgroundTextStyle": "dark" 
+}

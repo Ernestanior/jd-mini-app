@@ -1,15 +1,18 @@
-<view class="{{optionList[2].isShow===true?'mask':''}}" bindtap="handleClose"></view>
+<view class="{{optionList[2].isShow||optionList[1].isShow?'mask':''}}" bindtap="handleClose"></view>
 <view class="contain">
   <view class="title">Personal</view>
   <view class="user">
-    <view class="profile"><image src="/assets/aaa.png"/></view>
-    <view class="detail"> 
-      <view class="basis">
-        <view class="username">小喵</view>
-        <view class="age">18岁</view>
-       <image class="gender"src="/assets/icons/mine/female.png"/>
-      </view>
-      <view class="user-title">北京大学-心理学 博士</view>
+    <view wx:if="{{userInfo.nickName}}" style="display: flex;align-items: center;">
+      <image class="profile" src="{{userInfo.avatarUrl}}"/>
+      <view class="username">{{userInfo.nickName}}</view>
+    </view>
+    <view wx:else class="user_button">
+      <button  bindtap="getUserProfile" class="user_btn"
+      style="border:3rpx solid #fff;background-color:transparent;color:#fff;font-weight:400"> 登录 </button>
+      <!-- <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" class="user_btn"
+      style="border:3rpx solid #fff;background-color:transparent;color:#fff;font-weight:400"> 登录 </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="user_btn" 
+      style="border:3rpx solid #fff;background-color:transparent;color:#fff;font-weight:400">登录</button> -->
     </view>
   </view>
   <view class="option-container">
@@ -23,7 +26,10 @@
     </view>
   </view>
   <tabBar tid="3"></tabBar>
-  <view class="job-collection {{optionList[2].isShow===true?'collect-active':''}}">
+  <view class="job-collection {{optionList[2].isShow===true?'collect-active':''}}" wx:if="{{optionList[2].isShow}}">
     <jobCollect></jobCollect>
+  </view>
+  <view class="job-collection {{optionList[1].isShow===true?'collect-active':''}}">
+    <noteCollect></noteCollect>
   </view>
 </view>

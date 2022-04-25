@@ -1,0 +1,16 @@
+<scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="loadMore" refresher-enabled="{{true}}" refresher-threshold="{{100}}" refresher-triggered="{{triggered}}" bindrefresherrefresh="reload">
+  <view class="search">
+    <view class="publich" bindtap="handlePublish">
+      <image mode="widthFix" src="/assets/icons/white/publish.png"></image>
+    </view>
+    <view class="input-box">
+      <input class="input" type="text" placeholder="{{placeHolder}}" placeholder-style="color:#b08eff;" bindinput="handleInput" />
+      <image style="height:50rpx; width:50rpx;" src="/assets/icons/white/search.png" bindtap="handleSearch" />
+    </view>
+  </view>
+  <noteBox noteList="{{noteList}}" wx:if="{{noteList.length>0}}" />
+  <view wx:else class="not-found">
+    <image class="image" src="/assets/notFound.png"></image>
+    找不到你想要的笔记
+  </view>
+</scroll-view>

@@ -32,8 +32,8 @@ Component({
         img:'/assets/icons/tabBar/func.png',
         imgActive:'/assets/icons/tabBar/func_fill.png',
         open_type:null,
-        title:'新增功能',
-        bindtap:"goto_func"
+        title:'我的笔记',
+        bindtap:"goto_myNote"
       },
       {
         id:2,
@@ -87,13 +87,14 @@ Component({
         })
       }
     },
-    goto_func(){
+    goto_myNote(){
       // console.log(this.data);
+      const userInfo = wx.getStorageSync('userinfo')
       let {tid}=this.data;
       if(tid!=1){
-        if (this.data.userinfo) {
+        if (userInfo && userInfo.nickName) {
           wx.redirectTo({
-            url: '/pages/func/index',
+            url: '/pages/myNote/index',
           })
         }
         else {

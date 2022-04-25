@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "wemark": "../../wemark/wemark",
+    "tabBar": "/components/tabBar"
+  }
+}

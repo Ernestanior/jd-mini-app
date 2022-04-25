@@ -1,0 +1,13 @@
+<view class="note-collect" >
+  <view class="container-title">已收藏笔记</view>
+  <scroll-view scroll-y="true" class="note-container" bindscrolltolower="loadMore" refresher-enabled="{{true}}" refresher-threshold="{{100}}" refresher-triggered="{{triggered}}" bindrefresherrefresh="reload">
+    <view wx:if="{{noteList.length>0}}">
+      <noteBox noteList="{{noteList}}"/>
+      <view class="airWall"></view>
+    </view>
+    <view wx:else class="not-found">
+      <image class="image" src="/assets/notFound.png"></image>
+      你还没有收藏的笔记哦
+    </view>
+  </scroll-view>
+</view>
