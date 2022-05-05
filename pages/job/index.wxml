@@ -15,7 +15,9 @@
   <view class="job-content">
     <view class="job-content-title">--= 校招情报 =--</view>
     <view class="job-content-img">
-      <image wx:for="{{images}}" wx:key="item" mode="widthFix" src="{{item}}"></image>
+    <navigator wx:for="{{images}}" wx:key="item" url="/pages/webView/{{item.url}}/index">
+      <image mode="widthFix" src="{{item.img}}"/>
+    </navigator>
     </view>
   </view>
 </view>

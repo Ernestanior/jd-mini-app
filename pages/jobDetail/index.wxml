@@ -1,22 +1,21 @@
 <view class="job-detail">
-  <navBar 
-    title-text="职位详情" 
-    back-icon="/assets/icons/white/zuola.png"
-    titleColor="#fff"/>
+  <navBar title-text="职位详情" back-icon="/assets/icons/white/zuola.png" titleColor="#fff" />
   <view class="head">
-    <view style="display: flex;justify-content: space-between;margin-bottom: 35rpx;">
+    <view style="display: flex;justify-content: space-between;margin-bottom: 15rpx;">
       <view class="role">{{jobDetail.role}}</view>
       <view class="salaryRange">{{jobDetail.salaryRange}}</view>
     </view>
-    <view style="display: flex;justify-content: space-between;">
-      <view style="display: flex;">
-        <view class="tag">
-          <image class="icon" src="/assets/icons/white/address.png"></image>{{jobDetail.location}}
+    <view style="display: flex;justify-content: space-between;align-items: center;">
+      <view>
+        <view style="display: flex;">
+          <view class="tag">
+            <image class="icon" src="/assets/icons/white/address.png"></image>{{jobDetail.location}}
+          </view>
+          <view class="tag">
+            <image class="icon" src="/assets/icons/white/history.png"></image>{{jobDetail.type}}
+          </view>
         </view>
-        <view class="tag">
-          <image class="icon" src="/assets/icons/white/history.png"></image>{{jobDetail.type}}
-        </view>
-        <view class="tag_degree">
+        <view class="tag" style="margin-top: 15rpx;">
           <image class="icon" src="/assets/icons/white/degree.png"></image><text class="text">{{jobDetail.eduReq}}</text>
         </view>
       </view>

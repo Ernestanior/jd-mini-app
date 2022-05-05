@@ -9,12 +9,14 @@ Page({
     ddValue:'职位',
     placeholder:"职位 / 公司 ",
     images:
-    ["https://s4.ax1x.com/2022/01/26/7Os5PU.png",
-    "https://s4.ax1x.com/2022/01/27/7O6AX9.png",
-    "https://s4.ax1x.com/2022/01/27/7O6Z01.png",
-    "https://s4.ax1x.com/2022/01/27/7O6l1e.png",
-    "https://s4.ax1x.com/2022/01/27/7O6GnA.png",
-    "https://s4.ax1x.com/2022/01/27/7O6BcQ.png"]
+    [
+      {img:"https://s1.ax1x.com/2022/05/05/OZInTH.png",url:"1"},
+      {img:"https://s1.ax1x.com/2022/05/05/OZIg74.png",url:"2"},
+      {img:"https://s1.ax1x.com/2022/05/05/OZI491.png",url:"3"},
+      {img:"https://s1.ax1x.com/2022/05/05/OZIbHe.png",url:"4"},
+      {img:"https://s1.ax1x.com/2022/05/05/OZoSjf.png",url:"5"},
+      {img:"https://s1.ax1x.com/2022/05/05/OZoCDS.png",url:"6"},
+    ]
   },
 
   handleSearch(e){

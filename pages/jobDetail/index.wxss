@@ -5,7 +5,7 @@
   background-size: contain;
 }
 .head{
-  padding: 40rpx 30rpx 0 30rpx;
+  padding: 30rpx 30rpx 0 30rpx;
 }
 .head .role{
   color: #fff;
@@ -23,7 +23,7 @@
   align-items: center;
   font-size: 25rpx;
 }
-.head .tag_degree{
+/* .head .tag_degree{
   color: #fff;
   margin-right: 40rpx;
   display: flex;
@@ -35,7 +35,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
+} */
 .head .tag .icon{
   width: 30rpx;
   height: 30rpx;
@@ -47,7 +47,9 @@
   margin-right: 10rpx;
 }
 .head .collect{
-  padding: 8rpx 25rpx;
+  /* padding: 8rpx 25rpx; */
+  height: 45rpx;
+  width: 70rpx;
   display: flex;
   align-items: center;
   justify-content: center;
