@@ -21,6 +21,10 @@ Page({
    */
   onLoad: async function (options) {
     this.handleSearch()
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    })
   },
   onShow: async function () {
     this.handleSearch()

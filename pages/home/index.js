@@ -23,6 +23,20 @@ Page({
       url: '/',
     }]
   },
+  onLoad(){
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    })
+  },
+  // onShareAppMessage(){
+  //   return {
+  //     title:"转发到朋友"    }
+  // },
+  // onShareTimeline(){
+  //   return {
+  //     title:"转发到朋友圈"    }
+  // },
   handleNavigate(e) {
     const {url} = e.currentTarget.dataset
     const userInfo = wx.getStorageSync('userinfo')

@@ -18,7 +18,12 @@ Page({
       {img:"https://s1.ax1x.com/2022/05/05/OZoCDS.png",url:"6"},
     ]
   },
-
+  onLoad(){
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    })
+  },
   handleSearch(e){
     const {type,value,city}=e.detail;
     wx.navigateTo({

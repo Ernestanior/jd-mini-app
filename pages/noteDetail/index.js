@@ -74,6 +74,10 @@ clickImg: function(e){
     const {id}=options;
     this.setData({id})
     this.getNoteDetail(id)
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    })
   },
   async getNoteDetail(nid){
     wx.showLoading({title: 'loading'})

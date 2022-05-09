@@ -26,6 +26,10 @@ Page({
         setTimeout(()=>this.setData({publishPercent:i}),i*140)
       } 
     }
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    })
     // console.log(this.data.publishPercent);
   },
   onShow: async function () {
