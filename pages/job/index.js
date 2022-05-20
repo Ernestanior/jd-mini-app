@@ -10,12 +10,12 @@ Page({
     placeholder:"职位 / 公司 ",
     images:
     [
-      {img:"https://s1.ax1x.com/2022/05/05/OZInTH.png",url:"1"},
-      {img:"https://s1.ax1x.com/2022/05/05/OZIg74.png",url:"2"},
-      {img:"https://s1.ax1x.com/2022/05/05/OZI491.png",url:"3"},
-      {img:"https://s1.ax1x.com/2022/05/05/OZIbHe.png",url:"4"},
-      {img:"https://s1.ax1x.com/2022/05/05/OZoSjf.png",url:"5"},
-      {img:"https://s1.ax1x.com/2022/05/05/OZoCDS.png",url:"6"},
+      {img:"https://www.cdnjson.com/images/2022/05/18/1.png",url:"1"},
+      {img:"https://www.cdnjson.com/images/2022/05/18/2.png",url:"2"},
+      {img:"https://www.cdnjson.com/images/2022/05/18/3.png",url:"3"},
+      {img:"https://www.cdnjson.com/images/2022/05/18/4.png",url:"4"},
+      {img:"https://www.cdnjson.com/images/2022/05/18/5.png",url:"5"},
+      {img:"https://www.cdnjson.com/images/2022/05/18/6.png",url:"6"},
     ]
   },
   onLoad(){

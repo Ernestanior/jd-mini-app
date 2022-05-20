@@ -1,0 +1,9 @@
+<view class="alipay-container">
+  <view class="search-school">
+    <h2>搜索缴费院校</h2>
+    <view class="search-school-input">
+      <image class="search-school-input-image" mode="widthFix" src="/assets/search.png"/>
+      <input class="search-school-input-text" type="text" placeholder="输入需要缴费的院校名称（英文）"/>
+    </view>
+  </view>
+</view>

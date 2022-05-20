@@ -1,0 +1,17 @@
+.search-school{
+  padding:30rpx
+}
+.search-school-input {
+  display: flex;
+  border: 1px solid #000;
+  margin-top:20rpx;
+  border-radius: 15rpx;
+  padding:30rpx
+}
+.search-school-input-image{
+  width: 50rpx;
+  margin-right: 30rpx;
+}
+.search-school-input-text{
+  width: 100%;
+}

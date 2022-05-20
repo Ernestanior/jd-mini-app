@@ -203,3 +203,35 @@ export function likeNote(nid,flag){
 export function deleteNote(nid){
   return deleteApi(`${base_url}/note/del/${nid}`); 
 }
+
+
+export const aplipay= async (params,data,method="POST")=>{
+  const aliUrl = "https://openapi.stable.dl.alipaydev.com/gateway.do"
+  let param = ''
+  Object.keys(params).forEach(item=>{
+    param += `${item}=${params[item]}&`
+  }) 
+  param = param.substring(0,param.length-1)
+  console.log(param);
+
+  return new Promise((resolve, reject)=>{
+    wx.request({
+      method,
+      url:`${aliUrl}?${param}`,
+      data,
+      // header:{'AUTH': token},
+      success:(result)=>{
+        console.log(result);
+        resolve(result)
+      },
+      fail:(err)=>{
+        console.log(err);
+        reject()
+      }
+    })
+  })
+} 
+
+export const getSchool = ()=>{
+  return aplipay({timestamp:'2013-01-01 08:08:08',method:'alipay.overseas.open.school.query'},{school_name:"Berkeley College",AppID:"wxf507b42a5cd77760"})
+}

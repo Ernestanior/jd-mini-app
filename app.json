@@ -15,6 +15,7 @@
     "pages/myNote/index",
     "pages/noteDetail/index",
     "pages/publish/index",
+    "pages/alipay/index",
     "components/navBar/index",
     "components/tabBar/index",
     "components/jobBox/index",

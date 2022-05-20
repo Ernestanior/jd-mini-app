@@ -15,11 +15,11 @@ Page({
       url: '/pages/note/index',
     }, {
       imgURL: '/assets/icons/stream.png',
-      title: '实习校招',
-      url: '/',
+      title: '留学缴费',
+      url: '/pages/alipay/index',
     }, {
       imgURL: '/assets/icons/write.png',
-      title: '课程吐槽',
+      title: '待开发',
       url: '/',
     }]
   },
