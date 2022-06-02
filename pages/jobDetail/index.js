@@ -33,7 +33,6 @@ Page({
         console.log(data);
       }
     })
-
   },
   async handleCollect(){
     const {id,favedByCurUser}=this.data

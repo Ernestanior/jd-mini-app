@@ -233,5 +233,5 @@ export const aplipay= async (params,data,method="POST")=>{
 } 
 
 export const getSchool = ()=>{
-  return aplipay({timestamp:'2013-01-01 08:08:08',method:'alipay.overseas.open.school.query'},{school_name:"Berkeley College",AppID:"wxf507b42a5cd77760"})
+  return aplipay({timestamp:'2013-01-01 08:08:08',method:'alipay.overseas.open.school.query',app_id:"wxf507b42a5cd77760"},{school_name:"Berkeley College"})
 }
