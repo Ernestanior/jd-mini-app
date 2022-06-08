@@ -146,6 +146,10 @@ export function getComment(course){
 export function getJdList(data){
   return post(`${base_url}/jd/list`,data); 
 }
+// 每日推荐jd列表
+export function getRecJd(){
+  return get(`${base_url}/jd/rec`); 
+}
 // 根据id获取jd详情
 export function getJdDetail(data){
   return get(`${base_url}/jd/query/${data}`); 
@@ -169,6 +173,7 @@ export function getNoteByCourse(data){
   const {uniId,courseCode,pageNum,pageSize}=data
   return get(`${base_url}/note/query/${uniId}/${courseCode}?pageNum=${pageNum}&pageSize=${pageSize}`); 
 }
+
 // 根据用户id搜索笔记
 export function getNoteById(data){
   const {AuthorId,pageNum,pageSize}=data

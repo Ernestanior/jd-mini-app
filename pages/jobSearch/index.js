@@ -1,7 +1,8 @@
 const app = getApp()
 const {
   request,
-  getJdList
+  getJdList,
+  getRecJd
 } = app.require('request/index.js');
 const {
   debounce
@@ -28,11 +29,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: async function (options) {
-    console.log(options);
     const type = Object.keys(options)[0]
     const city = options['city']
-    console.log(type);
-    console.log(city);
     const value = options[type]
     this.setData({
       stopLoading: false,
@@ -77,12 +75,18 @@ Page({
       title: 'loading',
       mask: true,
     })
-    const res = await getJdList({
-      city,
-      pageNum,
-      "pageSize": 10,
-      [type]: value
-    })
+    let res;
+    if(value){
+      res = await getJdList({
+        city,
+        pageNum,
+        "pageSize": 10,
+        [type]: value
+      })
+    }
+    else{
+      res = await getRecJd()
+    }
     wx.hideLoading()
     if (res) {
       const {

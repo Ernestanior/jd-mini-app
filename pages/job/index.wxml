@@ -2,6 +2,7 @@
   <navBar  
     back-icon="/assets/icons/white/zuola.png"
     titleColor="#fff"/>
+  <view class="bg"></view>
   <view class="job-title">
     实习校招
     <view class="job-title-desc">寻找最优秀的你</view>

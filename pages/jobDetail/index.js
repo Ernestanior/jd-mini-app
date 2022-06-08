@@ -18,7 +18,6 @@ Page({
   onLoad: function  (options) {
     const {id} = options
     this.setData({id:id?id:1},async ()=>{
-      console.log(this.data.id);
       wx.showLoading({
         title: 'Loading',
       })

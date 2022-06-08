@@ -1,5 +1,6 @@
 <view class="{{optionList[2].isShow||optionList[1].isShow?'mask':''}}" bindtap="handleClose"></view>
 <view class="contain">
+  <view class="bg"></view>
   <view class="title">Personal</view>
   <view class="user">
     <view wx:if="{{userInfo.nickName}}" style="display: flex;align-items: center;">

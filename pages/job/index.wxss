@@ -1,7 +1,19 @@
 .job-search{
   width: 100vw;
-  background: url(https://s4.ax1x.com/2022/01/22/7hTDqP.png) no-repeat 0 -70rpx;
-  background-size: contain;
+  /* background: url(https://s4.ax1x.com/2022/01/22/7hTDqP.png) no-repeat 0 -70rpx;
+  background-size: contain; */
+}
+.bg{
+  background-color: #8d64fd;
+  z-index: -1;
+  width: 100%;
+  height: 460rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
 }
 .job-search .job-title{
   color: #fff;

@@ -1,4 +1,5 @@
 <view class="job-detail">
+<view class="bg"></view>
   <navBar title-text="职位详情" back-icon="/assets/icons/white/zuola.png" titleColor="#fff" />
   <view class="head">
     <view style="display: flex;justify-content: space-between;margin-bottom: 15rpx;">
@@ -31,11 +32,13 @@
       <text class="desc">{{jobDetail.desc}}</text>
     </view>
     <view class="company">
-      <image class="logo" mode="widthFix" src="https://api.reviewonclass.com/static/image/{{jobDetail.compLogo}}"></image>
       <view>
-        <view class="companyName">{{jobDetail.companyName}}</view>
-        <view class="description">{{jobDetail.companyDescription}} - {{jobDetail.staffSize}}</view>
-      </view>
+        <view class="companyName">      
+          <image class="logo" mode="widthFix" src="https://pic.reviewonclass.com/static/image/{{jobDetail.compLogo}}"></image>
+          {{jobDetail.companyName}}
+          </view>
+          <view class="description">{{jobDetail.companyDescription}} - {{jobDetail.staffSize}}</view>
+        </view>
     </view>
   </view>
 

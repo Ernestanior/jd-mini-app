@@ -3,6 +3,7 @@
     title-text="搜索" 
     back-icon="/assets/icons/white/zuola.png"
     titleColor="#fff"/>
+    <view class="bg"></view>
   <searchBox 
     dropDown="true" 
     ddList="{{ddList}}" 

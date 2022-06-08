@@ -32,8 +32,8 @@ Component({
   data: {
     onShow: false,
     inputValue: "",
-    cityList:['上海','广州','北京','深圳','成都','杭州','重庆','Brisbane','Melbourne','Sydney'],
-    city:'上海',
+    cityList:['全部','上海','广州','北京','深圳','成都','杭州','重庆','Brisbane','Melbourne','Sydney'],
+    city:'全部',
     cityListShow:false,
   },
 
