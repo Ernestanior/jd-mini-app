@@ -128,7 +128,6 @@ Page({
         type,
         value
       } = this.data
-      console.log(pageNum, city, type, value);
       const result = await this.findJdList(city, pageNum, type, value, false)
       if (result.length < 10) {
         wx.showToast({

@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-.note-box>image {
+.note-box>view>image {
   width: 320rpx;
 }
 

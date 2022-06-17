@@ -29,7 +29,6 @@ Page({
           jobDetail:data,
           favedByCurUser:data.favedByCurUser
         })
-        console.log(data);
       }
     })
   },

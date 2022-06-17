@@ -30,7 +30,7 @@
   <view class="job-collection {{optionList[2].isShow===true?'collect-active':''}}" wx:if="{{optionList[2].isShow}}">
     <jobCollect></jobCollect>
   </view>
-  <view class="job-collection {{optionList[1].isShow===true?'collect-active':''}}" wx:if="{{optionList[2].isShow}}">
+  <view class="job-collection {{optionList[1].isShow===true?'collect-active':''}}" wx:if="{{optionList[1].isShow}}">
     <noteCollect></noteCollect>
   </view>
 </view>

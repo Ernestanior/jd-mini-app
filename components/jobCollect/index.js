@@ -25,7 +25,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    handleSearch(e) {
+    handleSearch() {
       this.setData({
         stopLoading: false,
         pageNum: 1,
@@ -44,7 +44,6 @@ Component({
       })
       wx.hideLoading()
       if (res) {
-        console.log(res);
         const {data} = res.data
         if (data) {
           this.setData({

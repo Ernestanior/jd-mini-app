@@ -1,30 +1,20 @@
-<view class="job-box {{item.showDelete?'touch-move-active':''}}" wx:for="{{jobList}}" wx:for-item="item" wx:for-index="index" wx:key="index"   data-index="{{index}}"  bindtouchstart="touchStart" bindtouchmove="touchMove">
-    <view class="job-box-content" >
-      <view class="main" bindtap="toDetail" data-id="{{item.id}}">
-        <view class="item-title">
-          <text class="role">{{item.role}}</text>
-          <view class="type">{{item.type}}</view>
-        </view>
-        <view class="salaryRange">{{item.salaryRange}}</view>
-        <view class="condition">
-          <view class="tags" wx:for="{{item.tags}}" wx:key="index">{{item}}</view>
-        </view>
-        <view class="isDeleted" wx:if="{{item.isDeleted}}">该职位已被移除</view>
-        <view class="address">
-          <image class="companyIcon" mode="widthFix" src="https://pic.reviewonclass.com/static/image/{{item.compLogo}}"></image>
-          <view class="companyName">{{item.companyName}}</view>
-          <view class="staffSize">{{item.companyStaffSize}}</view>
-          <view class="city">
-            {{item.location}}
-            <image class="add-icon" src="/assets/icons/address.png"></image>
-          </view>
-        </view>
-        <view wx:if="{{item.dateTime}}" class="dateTime">{{item.dateTime}}</view>
-      </view>
-      <view class="del" bindtap="onDelete" data-id="{{item.id}}">
-        <view>取消</view>
-        <view>收藏</view>
-      </view>
+<view class="job-box" wx:for="{{jobList}}" wx:for-item="item" wx:for-index="index" wx:key="index" data-id="{{item.id}}" bindtap="toDetail">
+  <view class="item-title">
+    <text class="role">{{item.role}}</text>
+    <view class="type">{{item.type}}</view>
+    <view class="salaryRange">{{item.salaryRange}}</view>
+  </view>
+  <view class="condition">
+    <view class="tags" wx:for="{{item.tags}}" wx:key="index">{{item}}</view>
+  </view>
+  <view class="address">
+    <image class="companyIcon" mode="widthFix" src="https://pic.reviewonclass.com/static/image/{{item.compLogo}}"></image>
+    <view class="companyName">{{item.companyName}}</view>
+    <view class="staffSize">{{item.companyStaffSize}}</view>
+    <view class="city">
+      {{item.location}}
+      <image class="add-icon" src="/assets/icons/address.png"></image>
     </view>
-
+  </view>
+  <view wx:if="{{item.dateTime}}" class="dateTime">{{item.dateTime}}</view>
 </view>

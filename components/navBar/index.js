@@ -98,7 +98,6 @@ Component({
           wx.navigateBack({
               delta: 1
           })
-          console.log('back');
           this.triggerEvent('back', {back: 1})
       },
       home: function() {

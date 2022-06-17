@@ -7,7 +7,7 @@
       <view class="salaryRange">{{jobDetail.salaryRange}}</view>
     </view>
     <view style="display: flex;justify-content: space-between;align-items: center;">
-      <view>
+      <view style="width: 80vw;">
         <view style="display: flex;">
           <view class="tag">
             <image class="icon" src="/assets/icons/white/address.png"></image>{{jobDetail.location}}
@@ -17,7 +17,10 @@
           </view>
         </view>
         <view class="tag" style="margin-top: 15rpx;">
-          <image class="icon" src="/assets/icons/white/degree.png"></image><text class="text">{{jobDetail.eduReq}}</text>
+          <view style="display: flex;align-items: center;">
+            <image class="icon" src="/assets/icons/white/degree.png"></image>
+          </view>
+          <text class="text">{{jobDetail.eduReq}}</text>
         </view>
       </view>
       <view class="{{favedByCurUser?'collect active':'collect'}}" bindtap="handleCollect">
@@ -37,7 +40,7 @@
           <image class="logo" mode="widthFix" src="https://pic.reviewonclass.com/static/image/{{jobDetail.compLogo}}"></image>
           {{jobDetail.companyName}}
           </view>
-          <view class="description">{{jobDetail.companyDescription}} - {{jobDetail.staffSize}}</view>
+          <text class="description">{{jobDetail.companyDescription}} - {{jobDetail.staffSize}}</text>
         </view>
     </view>
   </view>

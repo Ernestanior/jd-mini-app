@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "jobBox":"/components/jobBox"
+    "jobCollectBox":"/components/jobCollectBox"
   }
 }

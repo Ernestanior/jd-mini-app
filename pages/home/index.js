@@ -8,7 +8,7 @@ Page({
     navList: [{
       imgURL: '/assets/icons/notebook.png',
       title: '职业搜索',
-      url: '/pages/job/index',
+      url: '/pages/jobSearch/index',
     }, {
       imgURL: '/assets/icons/recruit.png',
       title: '学霸笔记',
