@@ -41,7 +41,7 @@
   border-radius: 10rpx;
   position:absolute;
   left: 0;
-  top: 6.7vh;
+  top: 5.5vh;
   box-shadow: 0 0 15rpx rgb(233, 233, 233);
   z-index: 1;
 }

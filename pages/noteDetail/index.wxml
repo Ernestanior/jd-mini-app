@@ -20,12 +20,11 @@
     <view class="title">{{noteDetail.title}}<image wx:if="{{isMyNote}}" src="/assets/icons/trash.png" bindtap="handleDelete"></image></view>
     <rich-text class="content" nodes="{{noteDetail.content}}"></rich-text>
     <view class="publish-time">{{noteDetail.publishTime}}</view>
-    <comment comment="{{comment}}"/>
+    <comment comment="{{comment}}" noteId="{{id}}" bindrefreshComment="getNoteComment" bindeditComment="editComment"/>
   </view>
   </scroll-view>
   <view class="func-container">
     <view class="func-bar">
-      <input type="text" placeholder="说点什么..." class="comment-input"/>
       <view class="like"><image src="/assets/icons/heart-fill.png" wx:if="{{likedByCurUser}}" bindtap="handleLike"/><image src="/assets/icons/heart.png" wx:else bindtap="handleLike"/>{{like}}</view>
       <view class="fav"><image src="/assets/icons/star-fill.png"  wx:if="{{favedByCurUser}}" bindtap="handleFav"/><image src="/assets/icons/star.png" wx:else bindtap="handleFav"/>{{fav}}</view>
     </view>

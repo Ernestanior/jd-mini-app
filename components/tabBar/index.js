@@ -93,9 +93,13 @@ Component({
       let {tid}=this.data;
       if(tid!=1){
         if (userInfo && userInfo.nickName) {
-          wx.redirectTo({
-            url: '/pages/myNote/index',
-          })
+          // wx.redirectTo({
+          //   url: '/pages/myNote/index',
+          // })
+            wx.showModal({
+              content: '距离此功能开放还剩下3天哦！',
+              showCancel: false,
+            })
         }
         else {
           wx.showModal({

@@ -1,7 +1,8 @@
 const app = getApp()
 const {
   request,
-  getJdList
+  getJdList,
+  getCity
 } = app.require('request/index.js');
 Component({
   /**
@@ -32,8 +33,8 @@ Component({
   data: {
     onShow: false,
     inputValue: "",
-    cityList:['全部','上海','广州','北京','深圳','成都','杭州','重庆','Brisbane','Melbourne','Sydney'],
-    city:'全部',
+    cityList:[],
+    city:'上海',
     cityListShow:false,
   },
 
@@ -56,6 +57,10 @@ Component({
       this.setData({
         ddValue: ddvalue
       })
+    },
+    async getAllCity(){
+      const res = await getCity()
+      this.setData({cityList:res.data.data})
     },
     handleCitySelect(e){
       const {city} = e.currentTarget.dataset
@@ -102,6 +107,11 @@ Component({
       //   url:`/pages/jobSearch/index?${type}=${this.data.inputValue}`,
       // })
       this.triggerEvent('searchParams',{type:type,value:this.data.inputValue,city:this.data.city})
+    }
+  },
+  lifetimes:{
+    attached(){
+      this.getAllCity()
     }
   }
 })

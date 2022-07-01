@@ -10,7 +10,10 @@
   border-radius: 30rpx;
   overflow: hidden;
 }
-
+.note-box .first-img{
+  height: 350rpx;
+  overflow: hidden;
+}
 .note-box>view>image {
   width: 320rpx;
 }

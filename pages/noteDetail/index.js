@@ -33,12 +33,13 @@ Page({
     // },
     noteDetail:{},
     comment:[],
-    id:-1,
+    input:"",
+    id:-1, // noteID
     favedByCurUser:false,
     likedByCurUser:false,
     fav:0,
     like:0,
-    isMyNote:false,
+    isMyNote:false
   },
 
 //点击事件  
@@ -79,10 +80,19 @@ clickImg: function(e){
       menus: ['shareAppMessage', 'shareTimeline']
     })
   },
+  async getNoteComment(){
+    const comment = await getNoteComment(this.data.id)
+    this.setData({
+      comment:comment.data.data,
+    })
+  },
+  editComment(e){
+    console.log(e.detail);
+    this.setData({comment:e.detail});
+  },
   async getNoteDetail(nid){
     wx.showLoading({title: 'loading'})
     const noteDetail = await getNoteDetail(nid)
-    const comment = await getNoteComment(nid)
     const {id} = wx.getStorageSync('user-token')
     wx.hideLoading()
     const {data}=noteDetail.data
@@ -92,13 +102,13 @@ clickImg: function(e){
     const publishTime = this.ConvertTime(data.publishTime)
     this.setData({
       noteDetail:{...data,content,publishTime},
-      comment:comment.data.data,
       isMyNote: id===authorId,
       fav,
       like,
       likedByCurUser,
       favedByCurUser
     })
+    this.getNoteComment(nid)
   },
   async handleLike(){
     const {id,like,likedByCurUser} = this.data
@@ -138,6 +148,5 @@ clickImg: function(e){
         }
       }
     })
-   
-  }
+  },
 })

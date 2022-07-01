@@ -1,6 +1,6 @@
 <view class="note-container">
   <view class="note-box" wx:for="{{noteList}}" wx:key="id" >
-  <view wx:if="{{item.pic}}">
+  <view class="first-img" wx:if="{{item.pic}}">
     <image mode="widthFix" src="https://pic.reviewonclass.com/static/image/{{item.pic}}" data-id="{{item.id}}" data-status="{{item.status}}" bindtap="toDetail"/>
   </view>
   <view wx:else>

@@ -43,7 +43,11 @@ swiper image{
   justify-content: center;
   align-items: center;
 }
-.home-advs image{
+.home-advs navigator{
   width: 100%;
+}
+.navigator{
+  width: inherit;
+  border-radius: 30rpx;
   margin-bottom: 30rpx;
 }

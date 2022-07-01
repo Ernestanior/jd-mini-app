@@ -1,0 +1,14 @@
+var wxs = {
+  getParentReplay: function(comments,replyId){
+    var author =''
+    comments.forEach(function(item){
+      if(item.id===replyId){
+        author = item.authorName
+      }
+    })
+    return author
+  }
+}
+module.exports={
+  getParentReplay:wxs.getParentReplay
+}

@@ -1,5 +1,5 @@
 const app=getApp()
-const {request,getNoteByCourse} = app.require('request/index.js');
+const {request,getNoteByCourse,getRecNote} = app.require('request/index.js');
 Page({
 
   /**
@@ -8,7 +8,7 @@ Page({
   data: {
     noteList:[],
     uniId:1,
-    courseCode:'csse1001',
+    courseCode:'',
     stopLoading: false,
     pageNum: 1,
     pageSize:10,
@@ -44,9 +44,15 @@ Page({
       pageNum:1,
     },async ()=>{
       const {uniId,courseCode,pageNum,pageSize}=this.data
+      if(!courseCode){
+        const res = await getRecNote()
+        this.setData({noteList:res.data.data || [],triggered:false});
+        wx.hideLoading()
+        return
+      }
       const payload = {
         uniId,
-        courseCode:courseCode ||"csse1001",
+        courseCode:courseCode,
         pageNum,
         pageSize
       }

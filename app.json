@@ -29,7 +29,9 @@
     "pages/webView/3/index",
     "pages/webView/4/index",
     "pages/webView/5/index",
-    "pages/webView/6/index"
+    "pages/webView/6/index",
+    "pages/webView/7/index",
+    "pages/webView/8/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -3,7 +3,7 @@
     <view class="dropdown" bindtap="switchCity" wx:if="{{dropDown}}">
       {{city}} <image style="height:35rpx; width:35rpx; margin-left:15rpx;" src="/assets/icons/white/xiala.png"/>
       <view class="ddList" wx:if="{{cityListShow}}">
-        <view class="ddList-item" hover-class="hover" wx:for="{{cityList}}" wx:key="index" data-city="{{item}}" bindtap="handleCitySelect">{{item}}</view>
+        <view class="ddList-item" hover-class="hover" wx:for="{{cityList}}" wx:key="index" data-city="{{item.cname}}" bindtap="handleCitySelect">{{item.cname}}</view>
       </view>
     </view>
   </view>

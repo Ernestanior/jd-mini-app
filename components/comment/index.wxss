@@ -6,14 +6,14 @@
   color: #888;
   font-size: 30rpx;
 }
-.comment-input{
+.comment-container .comment-input{
   background-color: #eeeeee;
   width: 80vw;
   border-radius: 30rpx;
   margin: 30rpx 0;
   padding: 10rpx 25rpx 10rpx 25rpx;
 }
-.user-avatar{
+.comment-container .user-avatar{
   width: 70rpx;
   height: 70rpx;
   border-radius: 50%;
@@ -21,28 +21,28 @@
   background-color: #fff;
   margin-right: 30rpx;
 }
-.comment-box{
+.comment-container .comment-box{
   display: flex;
   justify-content: space-between;
   padding: 30rpx 0;
   border-bottom: 1px solid #eee;
 } 
-.comment-content{
+.comment-container .comment-content{
   flex: 1;
 }
-.comment-content .name{
+.comment-container .comment-content .name{
   color: #999;
   font-size: 28rpx;
   margin-bottom: 10rpx;
 }
-.comment-content .content{
+.comment-container .comment-content .content{
   color: #000;
   font-size: 26rpx;
 }
-.comment-reply{
+.comment-container .comment-reply{
   display: inline-block;
 }
-.comment-reply span{
+.comment-container.comment-reply span{
   font-size: 24rpx;
   color:#000;
 }

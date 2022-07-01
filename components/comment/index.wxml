@@ -1,20 +1,22 @@
+<wxs module="wxs" src="./index.wxs"></wxs>
 <view class="comment-container">
   <view class="total">共 {{comment.length}} 条评论</view>
-  <input type="text" placeholder="爱评论的人运气都不差~" class="comment-input" />
-  <view wx:for="{{comment}}" wx:key="item" class="comment-box">
-    <image class="user-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/sLFwDic6O9Fs5dLgkdbicicZEGjcas0U3VOeMLD52rD1zHGUqXhWCu0cIIYkbJjMmDPMTQnjWnMIpQiamX39Nyjnyw/132"></image>
+  <input wx:if="{{!replyId}}" type="text" placeholder="爱评论的人运气都不差~" class="comment-input" bindconfirm="onSubmit" bindinput="handleInput" value="{{inputValue}}" focus="{{inputActive}}" bindblur="handleBlur"/>
+  <input wx:else type="text" placeholder="{{replyAuthor}}" class="comment-input" bindconfirm="onSubmit" bindinput="handleInput" value="{{inputValue}}" focus="{{inputActive}}" bindblur="handleBlur"/>
+  <view wx:for="{{comment}}" wx:key="item" class="comment-box" bindtap="handleReply" data-currComment="{{item}}">
+    <image class="user-avatar" src="{{item.authorAvatarUrl}}"></image>
     <view class="comment-content">
       <view class="name">
         {{item.authorName}}
-        <view wx:if="{{item.replyId!==0}}" class="comment-reply"><span> 回复 </span> {{comment[item.replyId-1].authorName}}</view>
+        <view wx:if="{{!!item.replyId}}" class="comment-reply">回复 {{wxs.getParentReplay(comment,item.replyId)}}</view>
       </view>
       <view class="content">{{item.content}}</view>
     </view>
-    <view class="like">
-      <image src="/assets/icons/heart.png" />
-      {{item.like}}
+    <view class="like" catchtap="likeComment" data-currComment="{{item}}">
+        <image src="/assets/icons/heart-fill.png" wx:if="{{item.likedByCurUser}}"/>
+        <image src="/assets/icons/heart.png" wx:else/>
+        {{item.like}}
     </view>
-
   </view>
 
 </view>

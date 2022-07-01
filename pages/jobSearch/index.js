@@ -28,16 +28,13 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: async function (options) {
-    const type = Object.keys(options)[0]
-    const city = options['city']
-    const value = options[type]
+  onLoad: async function () {
+    // const type = Object.keys(options)[0]
+    // const city = options['city']
+    // const value = options[type]
     this.setData({
       stopLoading: false,
       pageNum:1,
-      type,
-      value,
-      city
     }, () => {
       const {
         pageNum,
@@ -85,7 +82,7 @@ Page({
       })
     }
     else{
-      res = await getRecJd()
+      res = await getRecJd(city)
     }
     wx.hideLoading()
     if (res) {

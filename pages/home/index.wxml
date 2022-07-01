@@ -20,8 +20,12 @@
     </view>
   </view>
   <view class="home-advs">
-    <image mode="widthFix" src="/assets/advs/1.png"></image>
-    <image mode="widthFix" src="/assets/advs/2.png"></image>
+    <navigator url="/pages/webView/7/index">
+      <image class="navigator" mode="widthFix" src="/assets/advs/1.jpg"/>
+    </navigator>
+    <navigator url="/pages/webView/8/index">
+      <image class="navigator" mode="widthFix" src="/assets/advs/2.jpg"/>
+    </navigator>
   </view>
 
   <tabBar tid="0"></tabBar>

@@ -11,7 +11,7 @@ export const get= async (url)=>{
       header:{'AUTH': token},
       success:(result)=>{
         // console.log(result);
-        if (result.data.code===418) {
+        if (result.data.code===444) {
           wx.showToast({
             title: '登录过期',
           })
@@ -46,7 +46,7 @@ export const post= async (url,data)=>{
       data,
       header:{'AUTH': token},
       success:(result)=>{
-        if (result.data.code===418) {
+        if (result.data.code===444) {
           wx.showToast({
             title: '登录过期',
           })
@@ -146,9 +146,15 @@ export function getComment(course){
 export function getJdList(data){
   return post(`${base_url}/jd/list`,data); 
 }
+
+// 获取所有城市
+export function getCity(){
+  return get(`${base_url}/city/all`); 
+}
+
 // 每日推荐jd列表
-export function getRecJd(){
-  return get(`${base_url}/jd/rec`); 
+export function getRecJd(city){
+  return get(`${base_url}/jd/recWithCity?city=${city}`); 
 }
 // 根据id获取jd详情
 export function getJdDetail(data){
@@ -168,6 +174,10 @@ export function addJdCollect(jdId,flag){
 export function getMd(){
   return get(`${base_url}/notes/u1/csse1001/week1/testRemotePic.md`); 
 }
+// 获取推荐笔记
+export function getRecNote(data){
+  return get(`${base_url}/note/rec`); 
+}
 // 根据课程号搜索笔记
 export function getNoteByCourse(data){
   const {uniId,courseCode,pageNum,pageSize}=data
@@ -182,6 +192,14 @@ export function getNoteById(data){
 // 根据笔记id搜索评论
 export function getNoteComment(noteId){
   return get(`${base_url}/review/queryByCode/${noteId}`); 
+}
+// 根据笔记id新增评论
+export function newComment(data){
+  return post(`${base_url}/review/new`,data); 
+}
+// 点赞/取消点赞评论
+export function likeComment(nid,rid,flag){
+  return post(`${base_url}/review/like/${nid}/${rid}/${flag}`); 
 }
 // 获取笔记收藏列表
 export function getFavNote(data){

@@ -7,7 +7,7 @@ Page({
   data: {
     navList: [{
       imgURL: '/assets/icons/notebook.png',
-      title: '职业搜索',
+      title: '实习校招',
       url: '/pages/jobSearch/index',
     }, {
       imgURL: '/assets/icons/recruit.png',
@@ -15,8 +15,9 @@ Page({
       url: '/pages/note/index',
     }, {
       imgURL: '/assets/icons/stream.png',
-      title: '留学缴费',
-      url: '/pages/alipay/index',
+      title: '待开发',
+      // url: '/pages/alipay/index',
+      url: '/',
     }, {
       imgURL: '/assets/icons/write.png',
       title: '待开发',
@@ -41,6 +42,13 @@ Page({
     const {url} = e.currentTarget.dataset
     const userInfo = wx.getStorageSync('userinfo')
     if (userInfo && userInfo.nickName) {
+      if(url==="/pages/note/index"){
+        wx.showModal({
+          content: '距离此功能开放还剩下3天哦！',
+          showCancel: false,
+        })
+        return
+      }
       wx.navigateTo({
         url,
       })
