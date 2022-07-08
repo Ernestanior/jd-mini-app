@@ -42,13 +42,13 @@ Page({
     const {url} = e.currentTarget.dataset
     const userInfo = wx.getStorageSync('userinfo')
     if (userInfo && userInfo.nickName) {
-      if(url==="/pages/note/index"){
-        wx.showModal({
-          content: '距离此功能开放还剩下3天哦！',
-          showCancel: false,
-        })
-        return
-      }
+      // if(url==="/pages/note/index"){
+      //   wx.showModal({
+      //     content: '距离此功能开放还剩下3天哦！',
+      //     showCancel: false,
+      //   })
+      //   return
+      // }
       wx.navigateTo({
         url,
       })

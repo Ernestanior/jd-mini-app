@@ -66,6 +66,7 @@ Component({
       this.triggerEvent("editComment",comment)
     },
     async handleReply(e){
+      console.log(e);
       const {id,authorName} = e.currentTarget.dataset.currcomment
       this.setData({inputActive:true,replyId:id,replyAuthor:`回复 ${authorName}`})
     }

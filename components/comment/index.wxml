@@ -4,19 +4,18 @@
   <input wx:if="{{!replyId}}" type="text" placeholder="爱评论的人运气都不差~" class="comment-input" bindconfirm="onSubmit" bindinput="handleInput" value="{{inputValue}}" focus="{{inputActive}}" bindblur="handleBlur"/>
   <input wx:else type="text" placeholder="{{replyAuthor}}" class="comment-input" bindconfirm="onSubmit" bindinput="handleInput" value="{{inputValue}}" focus="{{inputActive}}" bindblur="handleBlur"/>
   <view wx:for="{{comment}}" wx:key="item" class="comment-box" bindtap="handleReply" data-currComment="{{item}}">
-    <image class="user-avatar" src="{{item.authorAvatarUrl}}"></image>
-    <view class="comment-content">
-      <view class="name">
-        {{item.authorName}}
-        <view wx:if="{{!!item.replyId}}" class="comment-reply">回复 {{wxs.getParentReplay(comment,item.replyId)}}</view>
+      <image class="user-avatar" src="{{item.authorAvatarUrl}}"></image>
+      <view class="comment-content">
+        <view class="name">
+          {{item.authorName}}
+          <view wx:if="{{!!item.replyId}}" class="comment-reply">回复 {{wxs.getParentReplay(comment,item.replyId)}}</view>
+        </view>
+        <view class="content">{{item.content}}</view>
       </view>
-      <view class="content">{{item.content}}</view>
-    </view>
-    <view class="like" catchtap="likeComment" data-currComment="{{item}}">
-        <image src="/assets/icons/heart-fill.png" wx:if="{{item.likedByCurUser}}"/>
-        <image src="/assets/icons/heart.png" wx:else/>
-        {{item.like}}
-    </view>
+      <view class="like" catchtap="likeComment" data-currComment="{{item}}">
+          <image src="/assets/icons/heart-fill.png" wx:if="{{item.likedByCurUser}}"/>
+          <image src="/assets/icons/heart.png" wx:else/>
+          {{item.like}}
+      </view>
   </view>
-
 </view>

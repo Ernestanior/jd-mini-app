@@ -12,6 +12,8 @@
 }
 .note-box .first-img{
   height: 350rpx;
+  display: flex;
+  align-items: center;
   overflow: hidden;
 }
 .note-box>view>image {
@@ -25,6 +27,10 @@
 .note-box .note-content .note-title {
   font-size: 26rpx;
   margin-bottom: 20rpx;
+  width: 250rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .note-box .note-content .note-detail {
