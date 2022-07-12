@@ -46,7 +46,11 @@ Page({
       const {uniId,courseCode,pageNum,pageSize}=this.data
       if(!courseCode){
         const res = await getRecNote()
-        this.setData({noteList:res.data.data || [],triggered:false});
+        this.setData({
+          noteList:res.data.data || [],
+          triggered:false,
+          stopLoading:true
+        });
         wx.hideLoading()
         return
       }

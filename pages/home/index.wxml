@@ -1,7 +1,7 @@
 <!--pages/home/index.wxml-->
 <navBar 
     title-text="首页" 
-    home-icon="/assets/logo.png"
+    home-icon="/assets/logo.jpg"
     background="#f2f2f2"
     />
 <view class="content">

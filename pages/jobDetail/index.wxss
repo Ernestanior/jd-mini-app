@@ -98,6 +98,8 @@
   margin-right: 20rpx;
 }
 .company .companyName{
+  height:80rpx;
+  overflow: hidden;
   font-size: 28rpx;
   font-weight: 600;
   margin-bottom: 10rpx;

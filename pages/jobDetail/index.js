@@ -23,8 +23,9 @@ Page({
       })
       const res = await getJdDetail(this.data.id)
       wx.hideLoading()
-      const {data} = res.data
-      if(res){
+      const {data,code} = res.data
+      if(code===200){
+        console.log(data);
         this.setData({
           jobDetail:data,
           favedByCurUser:data.favedByCurUser

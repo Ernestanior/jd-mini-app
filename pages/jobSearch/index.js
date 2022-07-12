@@ -90,11 +90,23 @@ Page({
         data
       } = res.data
       if (data) {
-        this.setData({
-          jobList: reload ? [...data] : [...this.data.jobList, ...data],
-          stopLoading: false,
-          triggered:false
-        })
+        if (data.length < 10 || !value) {
+          // wx.showToast({
+          //   title: '没有更多职位了哦',
+          // })
+          this.setData({
+            jobList: reload ? [...data] : [...this.data.jobList, ...data],
+            stopLoading: true,
+            triggered:false
+          })
+        }
+        else{
+          this.setData({
+            jobList: reload ? [...data] : [...this.data.jobList, ...data],
+            stopLoading: false,
+            triggered:false
+          })
+        }
         return data;
       }
     } else {
@@ -125,15 +137,15 @@ Page({
         type,
         value
       } = this.data
-      const result = await this.findJdList(city, pageNum, type, value, false)
-      if (result.length < 10) {
-        wx.showToast({
-          title: '没有更多职位了哦',
-        })
-        this.setData({
-          stopLoading: true
-        })
-      }
+      this.findJdList(city, pageNum, type, value, false)
+      // if (result.length < 10) {
+      //   wx.showToast({
+      //     title: '没有更多职位了哦',
+      //   })
+      //   this.setData({
+      //     stopLoading: true
+      //   })
+      // }
     })
   }
 })
