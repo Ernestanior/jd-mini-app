@@ -1,34 +1,34 @@
 <view class="note-container">
-  <view class="note-box" wx:for="{{noteList}}" wx:key="id" >
-  <view class="first-img" wx:if="{{item.pic}}">
-    <image mode="widthFix" src="https://pic.reviewonclass.com/static/image/{{item.pic}}" data-id="{{item.id}}" data-status="{{item.status}}" bindtap="toDetail"/>
-  </view>
-  <view wx:else>
-    <image mode="widthFix" src="https://s4.ax1x.com/2022/02/03/HEUYG9.png" data-id="{{item.id}}" data-status="{{item.status}}" bindtap="toDetail"/>
-  </view>
-  <view class="note-content">
-    <view class="note-title">{{item.title}}</view>
-    <view class="note-detail">
-      <view class="note-user" data-id="{{item.id}}" data-status="{{item.status}}" bindtap="toDetail">
-        <view class="user-icon">
-          <image mode="widthFix" src="{{item.authorAvatar || '/assets/bbb.png'}}"></image>
+  <view class="note-box" wx:for="{{noteList}}" wx:key="id">
+    <view class="first-img" wx:if="{{item.pic}}">
+      <image mode="widthFix" src="https://pic.reviewonclass.com/static/image/{{item.pic}}" data-id="{{item.id}}" data-status="{{item.status}}" bindtap="toDetail" />
+    </view>
+    <view wx:else>
+      <image mode="widthFix" src="https://s4.ax1x.com/2022/02/03/HEUYG9.png" data-id="{{item.id}}" data-status="{{item.status}}" bindtap="toDetail" />
+    </view>
+    <view class="note-content">
+      <view class="note-title">{{item.title}}</view>
+      <view class="note-detail">
+        <view class="note-user" data-id="{{item.id}}" data-status="{{item.status}}" bindtap="toDetail">
+          <view class="user-icon">
+            <image mode="widthFix" src="{{item.authorAvatar || '/assets/bbb.png'}}"></image>
+          </view>
+          <view class="user-name">{{item.authorName}}</view>
         </view>
-        <view class="user-name">{{item.authorName}}</view>
-      </view>
-      <view class="note-icon">
-        <view class="note-like" data-id="{{item.id}}" data-fav="{{item.favedByCurUser}}" bindtap="handleFav">
-          <image mode="widthFix" src="/assets/icons/star-fill.png" wx:if="{{item.favedByCurUser}}" bindtap="handleFav"></image>
-          <image src="/assets/icons/star.png" mode="widthFix" wx:else bindtap="handleFav"/>
-          <view class="note-num">{{item.fav}}</view>
-        </view>
-        <view class="note-like" data-id="{{item.id}}" data-like="{{item.likedByCurUser}}" bindtap="handleLike">
-          <image mode="widthFix" src="/assets/icons/heart-fill.png" wx:if="{{item.likedByCurUser}}" bindtap="handleLike"></image>
-          <image mode="widthFix" src="/assets/icons/heart.png" wx:else bindtap="handleLike"/>
-          <view>{{item.like}}</view>
-        </view>
+        <view class="note-icon">
+          <view class="note-like" data-id="{{item.id}}" data-fav="{{item.favedByCurUser}}" bindtap="handleFav">
+            <image src="/assets/icons/star-fill.png" wx:if="{{item.favedByCurUser}}" bindtap="handleFav"></image>
+            <image src="/assets/icons/star.png" wx:else bindtap="handleFav" />
+            <view class="note-num">{{item.fav}}</view>
+          </view>
+          <view class="note-like" data-id="{{item.id}}" data-like="{{item.likedByCurUser}}" bindtap="handleLike">
+            <image src="/assets/icons/heart-fill.png" wx:if="{{item.likedByCurUser}}" bindtap="handleLike"></image>
+            <image src="/assets/icons/heart.png" wx:else bindtap="handleLike" />
+            <view>{{item.like}}</view>
+          </view>
 
+        </view>
       </view>
     </view>
   </view>
-</view>
 </view>

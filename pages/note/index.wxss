@@ -54,3 +54,15 @@
   width: 300rpx;
   height: 300rpx;
 }
+.note-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+}
+.note-box {
+  margin-bottom: 40rpx;
+  box-shadow: 0 0 5px 0 #e2e2e2, 0 0 10px 0 #e2e2e2, 0 0 15px 0 #e2e2e2;
+  border-radius: 30rpx;
+  overflow: hidden;
+}

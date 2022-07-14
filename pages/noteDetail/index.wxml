@@ -1,7 +1,8 @@
 <navBar back-icon="/assets/icons/zuola.png" titleColor="#000" />
 <view class="note-detail-container">
   <view class="user">
-    <image class="user-head" src="{{noteDetail.authorAvatar}}"></image>
+    <image wx:if="{{noteDetail.authorAvatar}}" class="user-head" src="{{noteDetail.authorAvatar}}"></image>
+    <image wx:else class="user-head" src="/assets/bbb.png"></image>
     {{noteDetail.authorName}}
   </view>
   <scroll-view scroll-y="true" class="scroll-view">

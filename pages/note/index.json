@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "navBar": "/components/navBar",
-    "noteBox": "/components/noteBox"
+    "noteBox": "/components/noteBox",
+    "noteBoxNew": "/components/noteBoxNew"
   },
   "navigationBarTitleText": "搜索笔记",
   "enablePullDownRefresh": true, 

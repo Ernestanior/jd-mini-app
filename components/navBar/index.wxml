@@ -8,7 +8,7 @@
             <image class="image" src='{{backIcon}}'></image>
         </view>
         <view class='home-icon' wx:if="{{homeIcon}}" bindtap='home'>
-            <image style="height: 60rpx" mode="heightFix" src='{{homeIcon}}'></image>
+            <image src='{{homeIcon}}'></image>
         </view>
         <view class='nav-icon' wx:if="{{titleImg}}">
             <image class="image" src='{{titleImg}}'></image>

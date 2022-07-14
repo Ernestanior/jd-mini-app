@@ -1,30 +1,18 @@
-.note-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  justify-content: space-between;
-}
-.note-box {
-  margin-bottom: 40rpx;
-  box-shadow: 0 0 5px 0 #e2e2e2, 0 0 10px 0 #e2e2e2, 0 0 15px 0 #e2e2e2;
-  border-radius: 30rpx;
-  overflow: hidden;
-}
-.note-box .first-img{
+ .first-img{
   height: 350rpx;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
-.note-box>view>image {
+view>image {
   width: 320rpx;
 }
 
-.note-box .note-content {
+ .note-content {
   padding: 10rpx 20rpx 20rpx 20rpx;
 }
 
-.note-box .note-content .note-title {
+ .note-content .note-title {
   font-size: 26rpx;
   margin-bottom: 20rpx;
   width: 250rpx;
@@ -33,22 +21,22 @@
   text-overflow: ellipsis;
 }
 
-.note-box .note-content .note-detail {
+ .note-content .note-detail {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.note-box .note-content .note-detail .note-user {
+ .note-content .note-detail .note-user {
   display: flex;
   align-items: center;
 }
 
-.note-box .note-content .note-detail .note-user .user-name {
+ .note-content .note-detail .note-user .user-name {
   font-size: 20rpx;
 }
 
-.note-box .note-content .note-detail .note-user .user-icon {
+ .note-content .note-detail .note-user .user-icon {
   background-color: pink;
   border-radius: 50%;
   width: 48rpx;
@@ -57,16 +45,16 @@
   margin-right: 10rpx;
 }
 
-.note-box .note-content .note-user .user-icon image {
+ .note-content .note-user .user-icon image {
   width: 48rpx;
 }
 
-.note-box .note-content .note-icon {
+ .note-content .note-icon {
   display: flex;
   align-items: center;
 }
 
-.note-box .note-content .note-icon .note-like {
+ .note-content .note-icon .note-like {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,11 +63,11 @@
   margin-left: 20rpx;
 }
 
-.note-box .note-content .note-icon .note-like image {
+ .note-content .note-icon .note-like image {
   width: 30rpx;
   height: 33rpx;
 }
 
-.note-box .note-content .note-icon .note-like .note-num {
+ .note-content .note-icon .note-like .note-num {
   margin-top: 5rpx;
 }

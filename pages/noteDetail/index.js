@@ -87,7 +87,6 @@ clickImg: function(e){
     })
   },
   editComment(e){
-    console.log(e.detail);
     this.setData({comment:e.detail});
   },
   async getNoteDetail(nid){

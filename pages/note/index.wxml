@@ -13,4 +13,9 @@
     <image class="image" src="/assets/notFound.png"></image>
     找不到你想要的笔记
   </view>
+  <!-- <view class="note-container">
+      <view class="note-box" wx:for="{{noteList}}" wx:key="id">
+        <noteBoxNew note="{{item}}"></noteBoxNew>
+      </view>
+  </view> -->
 </scroll-view>

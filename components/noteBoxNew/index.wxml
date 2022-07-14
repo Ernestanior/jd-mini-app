@@ -1,0 +1,30 @@
+    <view class="first-img" wx:if="{{note.pic}}">
+      <image mode="widthFix" src="https://pic.reviewonclass.com/static/image/{{note.pic}}" bindtap="toDetail" />
+    </view>
+    <view wx:else>
+      <image mode="widthFix" src="https://s4.ax1x.com/2022/02/03/HEUYG9.png" bindtap="toDetail" />
+    </view>
+    <view class="note-content">
+      <view class="note-title">{{note.title}}</view>
+      <view class="note-detail">
+        <view class="note-user" bindtap="toDetail">
+          <view class="user-icon">
+            <image mode="widthFix" src="{{note.authorAvatar || '/assets/bbb.png'}}"></image>
+          </view>
+          <view class="user-name">{{note.authorName}}</view>
+        </view>
+        <view class="note-icon">
+          <view class="note-like" data-favcount="{{note.fav}}" data-fav="{{note.favedByCurUser}}" bindtap="handleFav">
+            <image src="/assets/icons/star-fill.png" wx:if="{{note.favedByCurUser}}" bindtap="handleFav"></image>
+            <image src="/assets/icons/star.png" wx:else bindtap="handleFav" />
+            <view class="note-num">{{note.fav}}</view>
+          </view>
+          <view class="note-like" data-likecount="{{note.like}}" data-like="{{note.likedByCurUser}}" bindtap="handleLike">
+            <image src="/assets/icons/heart-fill.png" wx:if="{{note.likedByCurUser}}" bindtap="handleLike"></image>
+            <image src="/assets/icons/heart.png" wx:else bindtap="handleLike" />
+            <view>{{note.like}}</view>
+          </view>
+
+        </view>
+      </view>
+    </view>

@@ -42,6 +42,7 @@
   "usingComponents": {
     "navigationBar": "/components/navBar"
   },
+  "navigationBarTitleText": "桉璞希",
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
