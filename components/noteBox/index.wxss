@@ -77,7 +77,7 @@
 
 .note-box .note-content .note-icon .note-like image {
   width: 30rpx;
-  height: 33rpx;
+  height: 30rpx;
 }
 
 .note-box .note-content .note-icon .note-like .note-num {

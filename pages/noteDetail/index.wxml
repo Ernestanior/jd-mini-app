@@ -21,7 +21,8 @@
     <view class="title">{{noteDetail.title}}<image wx:if="{{isMyNote}}" src="/assets/icons/trash.png" bindtap="handleDelete"></image></view>
     <rich-text class="content" nodes="{{noteDetail.content}}"></rich-text>
     <view class="publish-time">{{noteDetail.publishTime}}</view>
-    <comment comment="{{comment}}" noteId="{{id}}" bindrefreshComment="getNoteComment" bindeditComment="editComment"/>
+    <!-- <comment comment="{{comment}}" noteId="{{id}}" bindrefreshComment="getNoteComment" bindeditComment="editComment"/> -->
+    <comment wx:if="{{id}}" noteId="{{id}}"/>
   </view>
   </scroll-view>
   <view class="func-container">

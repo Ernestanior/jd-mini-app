@@ -1,7 +1,7 @@
 // pages/noteDetail/index.js
 const app=getApp()
 const {formatTime} = app.require('utils/util.js');
-const {getNoteComment,getNoteDetail,likeNote,favNote,deleteNote} = app.require('request/index.js');
+const {getNoteDetail,likeNote,favNote,deleteNote} = app.require('request/index.js');
 Page({
 
   /**
@@ -34,7 +34,7 @@ Page({
     noteDetail:{},
     comment:[],
     input:"",
-    id:-1, // noteID
+    id:0, // noteID
     favedByCurUser:false,
     likedByCurUser:false,
     fav:0,
@@ -80,15 +80,6 @@ clickImg: function(e){
       menus: ['shareAppMessage', 'shareTimeline']
     })
   },
-  async getNoteComment(){
-    const comment = await getNoteComment(this.data.id)
-    this.setData({
-      comment:comment.data.data,
-    })
-  },
-  editComment(e){
-    this.setData({comment:e.detail});
-  },
   async getNoteDetail(nid){
     wx.showLoading({title: 'loading'})
     const noteDetail = await getNoteDetail(nid)
@@ -107,7 +98,7 @@ clickImg: function(e){
       likedByCurUser,
       favedByCurUser
     })
-    this.getNoteComment(nid)
+    
   },
   async handleLike(){
     const {id,like,likedByCurUser} = this.data

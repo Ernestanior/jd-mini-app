@@ -189,9 +189,13 @@ export function getNoteById(data){
   const {AuthorId,pageNum,pageSize}=data
   return get(`${base_url}/note/queryByAuthorId/${AuthorId}?pageNum=${pageNum}&pageSize=${pageSize}`); 
 }
-// 根据笔记id搜索评论
+// 根据笔记id搜索主评论
 export function getNoteComment(noteId){
   return get(`${base_url}/review/queryByCode/${noteId}`); 
+}
+// 根据笔记id和主评论id获取子评论
+export function getSubComment(noteId,parentId,pageNum){
+  return get(`${base_url}/review/querySubReviews/${noteId}/${parentId}?pageNum=${pageNum}&pageSize=5`); 
 }
 // 根据笔记id新增评论
 export function newComment(data){
