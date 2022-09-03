@@ -64,7 +64,7 @@ Component({
     },
     handleCitySelect(e){
       const {city} = e.currentTarget.dataset
-      this.setData({city})
+      this.setData({city},()=>this.handleSearch())
     },
     handleInput(e) {
       this.setData({

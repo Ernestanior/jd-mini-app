@@ -44,9 +44,25 @@
 .comment-content .content{
   color: #000;
   font-size: 28rpx;
+  display: flex;
+  flex-wrap: wrap;
+  text-overflow: clip;
+  width: 70vw;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+.comment-content .sub-content{
+  color: #000;
+  font-size: 28rpx;
+  display: flex;
+  flex-wrap: wrap;
+  text-overflow: clip;
+  width: 62vw;
+  word-wrap:break-word;
+  word-break:break-all;
 }
 .comment-reply{
-  margin-top: 10rpx;
+  margin-top: 30rpx;
   display: inline-block;
   font-size: 26rpx;
   color:#264588
@@ -63,4 +79,14 @@
   width: 30rpx;
   height: 30rpx;
   margin-bottom: 5rpx;
+}
+.end-comment{
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  font-size: 20rpx;
+  color:#aaa
+}
+.scroll-view{
+  max-height: 90vh;
 }

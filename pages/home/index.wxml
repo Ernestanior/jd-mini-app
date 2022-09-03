@@ -7,7 +7,9 @@
 <view class="content">
   <swiper >
     <swiper-item>
-      <image mode="widthFix" src="/assets/swiper/s2.png"></image>
+      <navigator url="/pages/webView/9/index">
+        <image mode="widthFix" src="/assets/swiper/s2.png"></image>
+      </navigator>
     </swiper-item>
     <!-- <swiper-item>
       <image mode="widthFix" src="/assets/swiper/s1.png"></image>

@@ -39,7 +39,8 @@ Page({
     likedByCurUser:false,
     fav:0,
     like:0,
-    isMyNote:false
+    isMyNote:false,
+    commentPage:1
   },
 
 //点击事件  

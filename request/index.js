@@ -190,8 +190,8 @@ export function getNoteById(data){
   return get(`${base_url}/note/queryByAuthorId/${AuthorId}?pageNum=${pageNum}&pageSize=${pageSize}`); 
 }
 // 根据笔记id搜索主评论
-export function getNoteComment(noteId){
-  return get(`${base_url}/review/queryByCode/${noteId}`); 
+export function getNoteComment(noteId,pageNum){
+  return get(`${base_url}/review/queryByCode/${noteId}?pageNum=${pageNum}&pageSize=10`); 
 }
 // 根据笔记id和主评论id获取子评论
 export function getSubComment(noteId,parentId,pageNum){

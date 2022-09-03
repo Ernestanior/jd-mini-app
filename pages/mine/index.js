@@ -35,7 +35,6 @@ Page({
     wx.getUserProfile({
       desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
-        console.log(res);
         const {encryptedData,rawData,iv,signature,userInfo} =res
         // console.log(userInfo);
         
@@ -43,26 +42,16 @@ Page({
           timeout: 10000,
           async success(res){
             const {code}=res;
-        console.log('gg');
-            console.log(code);
             wx.showLoading({
               title: 'loading',
             })
             const result = await getToken(code)
             wx.hideLoading()
-            console.log(result);
             if (result.data.code===200) {
-              // const {infoUpdateFlag,token}= result.data.data
               wx.showLoading({
                 title: 'loading',
               })
-              console.log(result.data);
               wx.setStorageSync("user-token", result.data.data);
-              // if(true){
-              //   const {nickName,avatarUrl}=userInfo
-              //   const r = await updateUserInfo({nickName,photoURL:avatarUrl})
-              //   console.log(r);
-              // }
               wx.setStorageSync("userinfo", userInfo);
               wx.hideLoading()
               wx.redirectTo({
@@ -72,38 +61,17 @@ Page({
             else{
               console.log(result.data.errMsg);
             }
-
-            // wx.request({
-            //   url: 'https://api.weixin.qq.com/sns/jscode2session',
-            //   data:{
-            //     appid:'wxc1dbd72b3f8b10cc',
-            //     secret:'62d2b3e8b874fe783a7bf6aa9586ff14',
-            //     js_code:code,
-            //     grant_type:'authorization_code'
-            //   },
-            //   method:"GET",
-            //   success(res){
-            //     console.log(res);
-            //   }
-            // })
           }
         })
-
-        // this.setData({
-        //   userInfo: res.userInfo,
-        //   hasUserInfo: true
-        // })
       }
     })
   },
   getUserInfo(e) {
-    console.log(e)
     const {encryptedData,rawData,iv,signature,userInfo} = e.detail;
     wx.login({
       timeout: 10000,
       success:(result)=>{
         const {code}=result;
-        console.log(result);
         console.log(code);
       }
     })
@@ -144,7 +112,7 @@ Page({
   },
   async onShow() {
     const userInfo = wx.getStorageSync("userinfo");
-    this.setData({ userInfo});
+    this.setData({userInfo});
     const {infoUpdateFlag,token,id} = wx.getStorageSync("user-token");
     // console.log(wx.getStorageSync("user-token"));
     if(infoUpdateFlag){

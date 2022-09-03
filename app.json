@@ -31,7 +31,8 @@
     "pages/webView/5/index",
     "pages/webView/6/index",
     "pages/webView/7/index",
-    "pages/webView/8/index"
+    "pages/webView/8/index",
+    "pages/webView/9/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -11,7 +11,7 @@ Page({
   },
   bindPickerChange: function(e) {
     this.setData({
-      id: e.detail.value
+      id: e.detail.value+1
     })
   },
   uploadImg: function () {
@@ -65,10 +65,17 @@ changeCourse(e){
     const {uniId,title,content}=e.detail.value
     // const publishTime = formatTime(new Date())
     // // console.log({title,content,uniId:parseInt(uniId)});
+    if(!courseCode){
+      wx.showToast({
+        icon:"error",
+        title: '课程号不能为空',
+      })
+      return 
+    }
     if(!courseCode.match(/^[a-zA-Z]{4}[0-9]{4}$/)){
       wx.showToast({
         icon:"error",
-        title: '课程代码不对哦',
+        title: '课程号格式不对哦',
       })
       return 
     }
