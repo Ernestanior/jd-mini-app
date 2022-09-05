@@ -1,13 +1,15 @@
 /* pages/home/index.wxss */
 swiper{
   width: 100%;
-  height: 21.5vh;
+  height: 350rpx;
 }
 swiper image{
   width: 100%;
 }
 .content{
+  height: 1330rpx;
   padding: 40rpx 40rpx 0 40rpx;
+  margin-top: 150rpx;
 }
 .home-nav{
   display: flex;

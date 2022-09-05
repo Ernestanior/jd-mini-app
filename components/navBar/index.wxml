@@ -1,6 +1,6 @@
-<view class='nav' style='height: {{status + navHeight}}px'>
-    <view class='status' style='height: {{status}}px'></view>
-    <view class='navbar' style='height:{{navHeight}}px'>
+<view class='nav' style='height: {{status + navHeight}}rpx;background-color: {{backgroundColor}};'>
+    <view class='status' style='height: {{status}}rpx'></view>
+    <view class='navbar' style='height:{{navHeight}}rpx'>
         <!-- <view class='left-icon' wx:if="{{leftIcon}}" bindtap='home'>
             <image class="image" src='{{leftIcon}}'></image>
         </view> -->

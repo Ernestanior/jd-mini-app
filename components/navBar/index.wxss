@@ -1,12 +1,18 @@
+.nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:99;
+  /* box-shadow: 0 0 10rpx 0 #ddd; */
+}
 .navbar{
   position: relative
 }
 .home-icon{
   /* width: 28px; */
-  height: 100%;
   position: absolute;
   transform: translateY(-50%);
-  top: 70%;
+  top: 72rpx;
   left: 40rpx;
   display: flex;
 }
@@ -16,23 +22,22 @@
 }
 .left-icon{
   /* width: 28px; */
-  height: 100%;
   position: absolute;
   transform: translateY(-50%);
-  top: 57%;
-  left: 40rpx;
+  top: 75rpx;
+  left: 15rpx;
   display: flex;
 }
 
 .left-icon .image{
-  width: 28px;
-  height: 33px;
+  width: 35rpx;
+  height: 42rpx;
   margin: auto;
 }
 .nav-title, .nav-icon{
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 50%;
+  top: 70rpx;
   font-weight: bold;
 }

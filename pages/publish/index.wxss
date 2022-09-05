@@ -1,4 +1,5 @@
 .publish-container{
+  margin-top: 170rpx;
   padding: 30rpx;
 }
 .publish-container .photo-list{

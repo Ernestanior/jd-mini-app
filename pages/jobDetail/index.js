@@ -25,7 +25,6 @@ Page({
       wx.hideLoading()
       const {data,code} = res.data
       if(code===200){
-        console.log(data);
         this.setData({
           jobDetail:data,
           favedByCurUser:data.favedByCurUser

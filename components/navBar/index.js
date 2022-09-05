@@ -34,15 +34,19 @@ Component({
         },
       fontSize: {
           type: Number,
-          value: 16
+          value: 32
       },
       iconHeight: {
           type: Number,
-          value: 19
+          value: 38
       },
       iconWidth: {
           type:Number,
-          value: 58
+          value: 116
+      },
+      backgroundColor:{
+        type:String,
+        value:'#fff'
       }
   },
   attached: function(){
@@ -62,9 +66,9 @@ Component({
               , isiOS = sysinfo.system.indexOf('iOS') > -1
               , navHeight;
           if (!isiOS) {
-              navHeight = 48;
+              navHeight = 96;
           } else {
-              navHeight = 44;
+              navHeight = 120;
           }
           that.setData({
               status: statusHeight,
@@ -81,11 +85,11 @@ Component({
               ].join(';');
           textStyle = [
               'color:' + that.data.color,
-              'font-size:' + that.data.fontSize + 'px'
+              'font-size:' + that.data.fontSize*2 + 'rpx'
           ].join(';');
           iconStyle = [
-              'width: ' + that.data.iconWidth + 'px',
-              'height: ' + that.data.iconHeight + 'px'
+              'width: ' + that.data.iconWidth*2 + 'rpx',
+              'height: ' + that.data.iconHeight*2 + 'rpx'
           ].join(';');
           that.setData({
               containerStyle: containerStyle,

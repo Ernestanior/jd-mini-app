@@ -1,6 +1,6 @@
 <view class="job-detail">
 <view class="bg"></view>
-  <navBar title-text="职位详情" back-icon="/assets/icons/white/zuola.png" titleColor="#fff" />
+  <navBar title-text="职位详情" back-icon="/assets/icons/white/zuola.png" titleColor="#fff" backgroundColor="#8766f4"/>
   <view class="head">
     <view style="display: flex;justify-content: space-between;margin-bottom: 15rpx;">
       <view class="role">{{jobDetail.role}}</view>

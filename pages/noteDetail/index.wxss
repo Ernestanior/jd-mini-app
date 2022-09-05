@@ -1,10 +1,14 @@
+.note-detail-container{
+  margin-top: 150rpx;
+}
 .user{
+  z-index: 100;
   display: flex;
   align-items: center;
   font-size: 28rpx;
   position: absolute;
-  top: 100rpx;
-  left:150rpx;
+  top: 65rpx;
+  left:120rpx;
 }
 .user-head{
   width: 70rpx;
@@ -16,10 +20,10 @@
 }
 .scroll-view {
   margin-top: 20rpx;
-  height: 80.5vh;
+  height: 1330rpx;
 }
 .func-container{
-  height: 8vh;
+  height: 120rpx;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -61,7 +65,8 @@
   padding: 10rpx 25rpx 10rpx 25rpx;
 }
 swiper{
-  height: 60vh;
+  height: 1200rpx;
+  background-color: pink;
 }
 swiper-item{
   display: flex;

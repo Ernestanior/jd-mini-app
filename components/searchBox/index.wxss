@@ -4,7 +4,7 @@
   padding: 0 30rpx;
 }
 .city-list{
-  width: 31vw;
+  width: 32vw;
   padding: 10rpx 0 10rpx 30rpx;
   border: 5rpx solid #fff;
   box-sizing: border-box;

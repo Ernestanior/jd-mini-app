@@ -2,7 +2,8 @@
   <navBar 
     title-text="搜索" 
     back-icon="/assets/icons/white/zuola.png"
-    titleColor="#fff"/>
+    titleColor="#fff"
+    backgroundColor="#8766f4"/>
     <view class="bg"></view>
   <searchBox 
     dropDown="true" 

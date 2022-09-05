@@ -14,7 +14,7 @@
       <image mode="widthFix" src="https://s4.ax1x.com/2022/02/12/HB931U.jpg"></image>
     </swiper-item> -->
     <swiper-item wx:for="{{noteDetail.pics}}" wx:key="item">
-      <image mode="widthFix" src="https://pic.reviewonclass.com/static/image/{{item}}"></image>
+      <image mode="widthFix" src="https://pic.reviewonclass.com/static/image/{{item}}" bindtap="clickImg" data-url="https://pic.reviewonclass.com/static/image/{{item}}"></image>
     </swiper-item>
   </swiper>
   <view class="content-box">

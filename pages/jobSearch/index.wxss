@@ -1,12 +1,11 @@
 .job-search{
-  width: 100vw;
-  height: 100vh;
+  margin-top: 180rpx;
   /* background: url(https://s4.ax1x.com/2021/12/06/oyeQWF.png) no-repeat 0 -40rpx;
   background-size: contain; */
 }
 .job-container{
   margin-top: 10rpx;
-  height: 75vh;
+  height: 1300rpx;
   box-sizing: border-box;
 }
 .no-more{

@@ -87,19 +87,20 @@ clickImg: function(e){
     const {id} = wx.getStorageSync('user-token')
     wx.hideLoading()
     const {data}=noteDetail.data
-    const {likedByCurUser,favedByCurUser,fav,like,authorId}=data
-    // const {noteDetail}=this.data
-    const content = this.ConvertContent(data.content)
-    const publishTime = this.ConvertTime(data.publishTime)
-    this.setData({
-      noteDetail:{...data,content,publishTime},
-      isMyNote: id===authorId,
-      fav,
-      like,
-      likedByCurUser,
-      favedByCurUser
-    })
-    
+    if(data){
+      const {likedByCurUser,favedByCurUser,fav,like,authorId}=data
+      // const {noteDetail}=this.data
+      const content = this.ConvertContent(data.content)
+      const publishTime = this.ConvertTime(data.publishTime)
+      this.setData({
+        noteDetail:{...data,content,publishTime},
+        isMyNote: id===authorId,
+        fav,
+        like,
+        likedByCurUser,
+        favedByCurUser
+      })
+    }
   },
   async handleLike(){
     const {id,like,likedByCurUser} = this.data
