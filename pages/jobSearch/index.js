@@ -2,7 +2,8 @@ const app = getApp()
 const {
   request,
   getJdList,
-  getRecJd
+  getRecJd,
+  getAllRecJd
 } = app.require('request/index.js');
 const {
   debounce
@@ -19,7 +20,7 @@ Page({
     type: "",
     value: "",
     pageNum: 1,
-    city: '上海',
+    city: '全部',
     stopLoading: false,
     jobList: [],
     triggered:false,
@@ -82,7 +83,12 @@ Page({
       })
     }
     else{
-      res = await getRecJd(city)
+      if(city==="全部"){
+        res = await getAllRecJd(pageNum)
+      }
+      else{
+        res = await getRecJd(city)
+      }
     }
     wx.hideLoading()
     if (res) {
@@ -90,7 +96,14 @@ Page({
         data
       } = res.data
       if (data) {
-        if (data.length < 10 || !value) {
+        if (this.data.city==="全部") {
+          this.setData({
+            jobList: reload ? [...data] : [...this.data.jobList, ...data],
+            stopLoading: false,
+            triggered:false
+          })
+        }
+        else if (data.length < 10 || !value) {
           // wx.showToast({
           //   title: '没有更多职位了哦',
           // })

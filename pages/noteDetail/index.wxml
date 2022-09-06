@@ -1,10 +1,10 @@
-<navBar back-icon="/assets/icons/zuola.png" titleColor="#000" />
-<view class="note-detail-container">
-  <view class="user">
+<navBar back-icon="/assets/icons/zuola.png" user-icon="{{noteDetail.authorAvatar}}" user-name="{{noteDetail.authorName}}" titleColor="#000" />
+<!-- <view class="user">
     <image wx:if="{{noteDetail.authorAvatar}}" class="user-head" src="{{noteDetail.authorAvatar}}"></image>
     <image wx:else class="user-head" src="/assets/bbb.png"></image>
     {{noteDetail.authorName}}
-  </view>
+  </view> -->
+<view class="note-detail-container">
   <scroll-view scroll-y="true" class="scroll-view">
     <swiper wx:if="{{noteDetail.pics&&noteDetail.pics.length}}" indicator-color="#fff" indicator-active-color="#ee7625">
       <!-- <swiper-item>
@@ -18,6 +18,8 @@
     </swiper-item>
   </swiper>
   <view class="content-box">
+    
+
     <view class="title">{{noteDetail.title}}<image wx:if="{{isMyNote}}" src="/assets/icons/trash.png" bindtap="handleDelete"></image></view>
     <rich-text class="content" nodes="{{noteDetail.content}}"></rich-text>
     <view class="publish-time">{{noteDetail.publishTime}}</view>

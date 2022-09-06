@@ -151,8 +151,11 @@ export function getJdList(data){
 export function getCity(){
   return get(`${base_url}/city/all`); 
 }
-
-// 每日推荐jd列表
+// 每日推荐jd列表-全部城市
+export function getAllRecJd(pageNum){
+  return get(`${base_url}/jd/listWithoutCity?pageNum=${pageNum}&pageSize=10`); 
+}
+// 每日推荐jd列表-按城市筛选
 export function getRecJd(city){
   return get(`${base_url}/jd/recWithCity?city=${city}`); 
 }

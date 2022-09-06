@@ -27,7 +27,7 @@
 }
 .title{
   width: 100%;
-  height: 5vh;
+  height: 50rpx;
   border-bottom: 1px dashed #bfbfbf;
   margin-bottom: 20rpx;
 }

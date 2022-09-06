@@ -55,7 +55,7 @@ Component({
         }
       })
       this.setData({comment:origin},()=>{
-        console.log(this.data.comment);
+        // console.log(this.data.comment);
       })
     },
     async onSubmit(e){

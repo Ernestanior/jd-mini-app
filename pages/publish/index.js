@@ -14,6 +14,15 @@ Page({
       id: e.detail.value+1
     })
   },
+  onTitleInput(e){
+    console.log(e.detail.value.length);
+    if (e.detail.value.length>=20) {
+      wx.showToast({
+        icon:"error",
+        title: '标题超过20个字',
+      })
+    }
+  },
   uploadImg: function () {
     let a = this;
     wx.showActionSheet({

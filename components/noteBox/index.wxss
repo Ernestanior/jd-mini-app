@@ -1,12 +1,12 @@
 .note-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 40rpx;
   justify-content: space-between;
 }
 .note-box {
   margin-bottom: 40rpx;
-  box-shadow: 0 0 5px 0 #e2e2e2, 0 0 10px 0 #e2e2e2, 0 0 15px 0 #e2e2e2;
+  box-shadow: 0 0 10rpx 0 #e2e2e2, 0 0 20rpx 0 #e2e2e2, 0 0 30rpx 0 #e2e2e2;
   border-radius: 30rpx;
   overflow: hidden;
 }

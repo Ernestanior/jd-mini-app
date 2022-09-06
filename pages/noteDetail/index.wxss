@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;
   font-size: 28rpx;
-  position: absolute;
-  top: 65rpx;
+  position: fixed;
+  top: 60rpx;
   left:120rpx;
 }
 .user-head{
@@ -20,10 +20,10 @@
 }
 .scroll-view {
   margin-top: 20rpx;
-  height: 1330rpx;
+  height: 1400rpx;
 }
 .func-container{
-  height: 120rpx;
+  background-color: #fff;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -32,6 +32,7 @@
   padding: 20rpx 30rpx;
   box-sizing: border-box;
   display: flex;
+  z-index: 99;
 }
 .func-bar{
   display: flex;
@@ -65,8 +66,7 @@
   padding: 10rpx 25rpx 10rpx 25rpx;
 }
 swiper{
-  height: 1200rpx;
-  background-color: pink;
+  height: 1000rpx;
 }
 swiper-item{
   display: flex;

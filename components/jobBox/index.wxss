@@ -5,29 +5,27 @@
   margin: 40rpx;
   margin-top: 20rpx;
 }
-.job-box .item-title{
-  position: relative;
-  display: flex;
-  margin-bottom: 10rpx;
-}
-.job-box .item-title .role{
+.job-box .role{
   font-weight: 500;
   margin-right: 15rpx;
-  max-width: 350rpx;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+
 }
-.job-box .item-title .salaryRange{
-  position: absolute;
-  right: 0;
+.job-box .item-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10rpx;
+}
+
+.job-box .salaryRange{
+  font-size: 25rpx;
   font-weight: 500;
   color: rgb(255, 137, 58);
 }
 .job-box .type{
-  padding: 5rpx 14rpx;
+  padding: 4rpx 12rpx;
   background-color: rgb(97, 10, 148);
-  font-size: 25rpx;
+  font-size: 21rpx;
   color: #eee;
   border-radius: 18rpx;
 }
@@ -44,31 +42,37 @@
   margin: 15rpx 10rpx 0 0;
   border-radius: 15rpx;
 }
-
+.job-box .company{
+  border-top: 1px solid rgb(230, 230, 230);
+  display: flex;
+  align-items: center;
+  color: rgb(131, 131, 131);
+  padding-top: 15rpx;
+}
+.job-box .companyIcon{
+  width: 40rpx;
+  margin-right: 16rpx;
+}
+.job-box .companyName{
+  margin-right: 20rpx;
+  font-size: 25rpx;
+}
 .job-box .address{
   position: relative;
-  margin-top: 25rpx;
   padding-top: 15rpx;
   display: flex;
   flex-wrap: wrap;
   font-size: 25rpx;
   align-items: center;
+  justify-content: space-between;
   color: rgb(131, 131, 131);
-  border-top: 1px solid rgb(230, 230, 230);
-}
-.job-box .address .companyIcon{
-  width: 3vh;
-  height: 3vh;
-  margin-right: 16rpx;
-}
-.job-box .address .companyName{
-  margin-right: 20rpx;
 }
 .job-box .address .city{
+  font-size: 25rpx;
+  color: rgb(131, 131, 131);
   display: flex;
   align-items: center;
-  position: absolute;
-  right: 0;
+  justify-content: flex-end;
 }
 .job-box .address .city .add-icon{
   width: 40rpx;

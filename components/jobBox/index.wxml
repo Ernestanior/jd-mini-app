@@ -1,20 +1,24 @@
 <view class="job-box" wx:for="{{jobList}}" wx:for-item="item" wx:for-index="index" wx:key="index" data-id="{{item.id}}" bindtap="toDetail">
+  <text class="role">{{item.role}}</text>
   <view class="item-title">
-    <text class="role">{{item.role}}</text>
-    <view class="type">{{item.type}}</view>
     <view class="salaryRange">{{item.salaryRange}}</view>
+    <view class="type">{{item.type}}</view>
   </view>
   <view class="condition">
     <view class="tags" wx:for="{{item.tags}}" wx:key="index">{{item}}</view>
   </view>
-  <view class="address">
+  <view class="company" >
     <image class="companyIcon" mode="widthFix" src="https://pic.reviewonclass.com/static/image/{{item.compLogo}}"></image>
     <view class="companyName">{{item.companyName}}</view>
+  </view>
+
+  <view class="address">
     <view class="staffSize">{{item.companyStaffSize}}</view>
     <view class="city">
       {{item.location}}
       <image class="add-icon" src="/assets/icons/address.png"></image>
     </view>
   </view>
+
   <view wx:if="{{item.dateTime}}" class="dateTime">{{item.dateTime}}</view>
 </view>

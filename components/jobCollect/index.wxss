@@ -1,9 +1,9 @@
 .job-collect{
-  height: 80vh;
+  height: 1300rpx;
   background-color: #fff;
   border-top-left-radius: 40rpx;
   border-top-right-radius: 40rpx;
-  padding: 2vh 0;
+  padding: 30rpx 0;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -11,10 +11,10 @@
   text-align: center;
   font-size: 35rpx;
   font-weight: 600;
-  margin-bottom: 2vh;
+  margin-bottom: 30rpx;
 }
 .job-container{
-  height: 80vh;
+  height: 1000rpx;
   box-sizing: border-box;
 }
 .airWall{

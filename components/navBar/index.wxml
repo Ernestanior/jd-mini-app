@@ -8,7 +8,12 @@
             <image class="image" src='{{backIcon}}'></image>
         </view>
         <view class='home-icon' wx:if="{{homeIcon}}" bindtap='home'>
-            <image src='{{homeIcon}}'></image>
+            <image class="image" src='{{homeIcon}}'></image>
+        </view>
+        <view class="left-mid" wx:if="{{userName}}">
+          <image wx:if="{{userIcon}}" class="image" src='{{userIcon}}'></image>
+          <image wx:else class="image" src='/assets/bbb.png'></image>
+          {{userName}}
         </view>
         <view class='nav-icon' wx:if="{{titleImg}}">
             <image class="image" src='{{titleImg}}'></image>

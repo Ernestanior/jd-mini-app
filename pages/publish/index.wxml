@@ -7,7 +7,7 @@
       </picker>
       <input type="text" class="course" placeholder="输入课程编号" bindinput="changeCourse"/>
     </view>
-    <textarea maxlength="-1" class="title" name="title" placeholder="你的标题" auto-focus />
+    <textarea maxlength="20" class="title" name="title" placeholder="你的标题" auto-focus bindinput="onTitleInput"/>
     <textarea maxlength="-1" class="content" name="content" placeholder="分享你的一些想法~~" auto-focus />
     <view class="photo-list">
       <view wx:for="{{imgPaths}}" wx:key="item" class="photo">

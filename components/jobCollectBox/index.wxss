@@ -68,8 +68,7 @@
   border-top: 1px solid rgb(230, 230, 230);
 }
 .job-box .address .companyIcon{
-  width: 3vh;
-  height: 3vh;
+  width: 40rpx;
   margin-right: 16rpx;
 }
 .job-box .address .companyName{
@@ -86,7 +85,6 @@
   height: 40rpx;
 }
 .job-box .dateTime{
-  margin-top: 1vh;
   color: rgb(160, 160, 160);
   font-size: 25rpx;
 }

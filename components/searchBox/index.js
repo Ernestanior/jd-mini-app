@@ -34,7 +34,7 @@ Component({
     onShow: false,
     inputValue: "",
     cityList:[],
-    city:'上海',
+    city:'全部',
     cityListShow:false,
   },
 
@@ -60,7 +60,7 @@ Component({
     },
     async getAllCity(){
       const res = await getCity()
-      this.setData({cityList:res.data.data})
+      this.setData({cityList:[{id:0,cname:"全部"},...res.data.data]})
     },
     handleCitySelect(e){
       const {city} = e.currentTarget.dataset
